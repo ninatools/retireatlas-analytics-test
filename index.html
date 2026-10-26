@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RetireAtlas Analytics Test</title>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"80b34a467198469e92e3636312d38b9f"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+  <style>
+    :root { color-scheme: light; --purple: #6d5ce7; --ink: #24213b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; font: 17px/1.6 system-ui, -apple-system, sans-serif; color: var(--ink); background: #f7f6ff; }
+    main { max-width: 680px; margin: 8vh auto; padding: 28px; background: white; border: 1px solid #e5e1ff; border-radius: 18px; box-shadow: 0 8px 28px #28205b12; }
+    .brand { color: var(--purple); font-weight: 800; letter-spacing: .04em; }
+    h1 { line-height: 1.15; font-size: clamp(2rem, 7vw, 3rem); }
+    .note { padding: 14px 16px; border-radius: 10px; background: #f0edff; }
+    button { border: 0; border-radius: 10px; padding: 12px 18px; color: white; background: var(--purple); font: inherit; font-weight: 700; }
+    footer { margin-top: 24px; color: #69677b; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">RetireAtlas · TEST</div>
+    <h1>Cloudflare Web Analytics test page</h1>
+    <p>This is a separate, minimal page used to check whether the Cloudflare Web Analytics beacon loads.</p>
+    <div class="note"><strong>Test:</strong> Open or refresh this page, wait a few minutes, then check Cloudflare Web Analytics.</div>
+    <p><button type="button" onclick="document.getElementById('test-status').textContent='Button interaction recorded locally at '+new Date().toLocaleTimeString()">Test page interaction</button></p>
+    <p id="test-status" aria-live="polite">No interaction yet.</p>
+    <footer>This is a test page, not the RetireAtlas production website.</footer>
+  </main>
+</body>
+</html>
