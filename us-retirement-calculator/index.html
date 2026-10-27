@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estimate retirement savings, compare retirement ages, and understand inflation with this free retirement calculator.">
+<meta name="theme-color" content="#142b49">
+<title>US Retirement Calculator | RetireAtlas</title>
+<style>
+:root{--navy:#142b49;--teal:#087f72;--blue:#2563eb;--ink:#17243a;--muted:#637188;--line:#dce5ef;--bg:#f5f7fb;--white:#fff;--warning:#fff7e6;--warning-ink:#805500;--danger:#b42318;--radius:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:15px 20px}.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:1.25rem;font-weight:800;letter-spacing:-.03em}.brand span{color:#7dd3c7}.nav-note{font-size:.9rem;color:#dbe7f4}
+main{max-width:1180px;margin:26px auto;padding:0 16px 40px}.hero{margin-bottom:22px}.eyebrow{color:var(--teal);font-weight:750;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin:6px 0 10px;letter-spacing:-.04em;color:var(--navy)}.hero p{color:var(--muted);max-width:760px;margin:0}
+.layout{display:grid;grid-template-columns:minmax(280px,365px) minmax(0,1fr);gap:20px;align-items:start}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 4px 18px rgba(20,43,73,.035)}h2{font-size:1.12rem;color:var(--navy);margin:0 0 14px}h3{font-size:1rem;color:var(--navy);margin:0 0 10px}.section{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}.section:last-child{border:0;padding:0;margin:0}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}label{display:block;font-size:1rem;font-weight:650;margin-bottom:6px;color:#33445e}input{width:100%;min-width:0;border:1px solid #cbd7e5;border-radius:10px;padding:11px 12px;font:inherit;color:var(--ink);background:#fff}input:focus{outline:3px solid #bfdbfe;border-color:var(--blue)}.hint{font-size:.78rem;color:var(--muted);margin:5px 0 0}.actions{display:flex;gap:10px;margin-top:18px}button{font:inherit;font-weight:750;border-radius:10px;padding:12px 15px;cursor:pointer}.primary{background:var(--blue);color:white;border:1px solid var(--blue);flex:1}.secondary{background:#fff;color:var(--navy);border:1px solid var(--line)}button:focus-visible{outline:3px solid #bfdbfe;outline-offset:2px}.error{display:none;background:#fff0ef;color:var(--danger);border:1px solid #f2b8b5;border-radius:10px;padding:11px 12px;margin-top:14px;font-size:.9rem}
+.results{display:grid;gap:16px}.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.metric{border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0}.metric .label{font-size:.82rem;color:var(--muted);font-weight:650}.metric .value{font-size:clamp(1.25rem,2.5vw,1.8rem);font-weight:850;color:var(--navy);letter-spacing:-.04em;overflow-wrap:anywhere;margin:5px 0}.metric.primary-metric{background:#e8f5f1;border-color:#b9e1d8}.metric.primary-metric .value{color:var(--teal)}.small{font-size:.9rem;color:var(--muted)}.chart-wrap{width:100%;overflow:hidden}canvas{width:100%;height:250px;display:block}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:610px}th,td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}th{color:#42536b;background:#f7f9fc;font-size:.79rem}th:first-child,td:first-child{text-align:left}tbody tr:last-child td{border-bottom:0}.selected-row{background:#eaf2ff;font-weight:750}.income-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.income-box{border:1px solid var(--line);border-radius:12px;padding:15px}.income-number{font-size:1.35rem;font-weight:850;margin-top:5px}.gap-number{color:var(--danger)}.notice{background:var(--warning);color:var(--warning-ink);border:1px solid #f0dca8;border-radius:12px;padding:14px;font-size:.88rem}.disclaimer{font-size:.82rem;color:var(--muted);margin:0}footer{max-width:1180px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:.8rem}
+.tools-card a{color:#6d5ce7;font-weight:700}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr 1fr}.summary-grid .metric:last-child{grid-column:1/-1}}@media(max-width:520px){header{padding:13px 16px}.nav-note{display:none}main{margin-top:20px;padding:0 12px 28px}.card{padding:16px}.field-grid,.summary-grid,.income-grid{grid-template-columns:1fr}.summary-grid .metric:last-child{grid-column:auto}.actions{flex-direction:column}canvas{height:220px}}
+</style>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"80b34a467198469e92e3636312d38b9f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<header><div class="nav"><div class="brand">Retire<span>Atlas</span></div><div class="nav-note">Plan with clarity. Prepare with confidence.</div></div></header>
+<main>
+<section class="hero"><div class="eyebrow">Free retirement planning tool</div><h1>US Retirement Calculator</h1><p>Estimate how your savings could grow, compare retirement ages, and see how inflation may affect your future purchasing power.</p></section>
+<div class="layout">
+<section class="card" aria-labelledby="input-title"><h2 id="input-title">Your information</h2>
+<form id="retirement-form" novalidate>
+<div class="section"><div class="field-grid">
+<div><label for="currentAge">Current age</label><input id="currentAge" type="number" min="18" max="100" step="1" value="40" required><p class="hint">Age today</p></div>
+<div><label for="retirementAge">Retirement age</label><input id="retirementAge" type="number" min="18" max="100" step="1" value="65" required><p class="hint">Your planned age</p></div>
+<div><label for="savings">Current retirement savings ($)</label><input id="savings" type="number" min="0" max="1000000000000" step="100" value="50000" required></div>
+<div><label for="monthly">Monthly contribution ($)</label><input id="monthly" type="number" min="0" max="1000000000" step="25" value="500" required><p class="hint">Keep this amount fixed</p></div>
+<div><label for="returnRate">Expected annual return (%)</label><input id="returnRate" type="number" min="-99" max="100" step="0.1" value="5" required><p class="hint">An assumption, not a promise</p></div>
+<div><label for="inflation">Annual inflation (%)</label><input id="inflation" type="number" min="0" max="100" step="0.1" value="2.5" required></div>
+</div></div>
+<div class="section"><h3>Your retirement income goal</h3><div class="field-grid">
+<div><label for="goal">Monthly income goal ($)</label><input id="goal" type="number" min="0" max="100000000" step="50" value="3000" required><p class="hint">In today's dollars</p></div>
+<div><label for="social">Social Security estimate ($/month)</label><input id="social" type="number" min="0" max="1000000" step="25" value="1200" required><p class="hint">In today's dollars</p></div>
+<div><label for="other">Other retirement income ($/month)</label><input id="other" type="number" min="0" max="1000000" step="25" value="0" required></div>
+</div></div>
+<div class="notice">Enter your Social Security estimate in today's dollars. You can check your personal estimate using the official Social Security Administration tools.</div>
+ <div class="actions"><button class="primary" type="submit">Calculate my retirement</button><button class="secondary" type="button" id="reset" onclick="window.location.reload()">Reset</button></div><div id="error" class="error" role="alert" aria-live="polite"></div>
+</form></section>
+<section class="results" aria-live="polite" aria-label="Retirement results">
+<div class="card"><h2>Your estimate</h2><div class="summary-grid"><div class="metric primary-metric"><div class="label">Estimated savings at retirement</div><div class="value" id="futureValue">$623,785</div><div class="small">Future dollars</div></div><div class="metric"><div class="label">Total amount invested</div><div class="value" id="totalContrib">$230,000</div><div class="small">Starting savings + contributions</div></div><div class="metric"><div class="label">Value in today's dollars</div><div class="value" id="todayValue">$297,385</div><div class="small">Adjusted for inflation</div></div></div></div>
+<div class="card"><h2>Savings growth over time</h2><div class="chart-wrap"><canvas id="growthChart" role="img" aria-label="Chart showing estimated retirement savings growth over time"></canvas></div><p class="small">Illustration based on a constant assumed return; actual returns vary.</p></div>
+<div class="card"><h2>Compare retirement ages</h2><p class="small">Each age uses the same starting savings, monthly contribution, return, and inflation assumptions.</p><div class="table-wrap"><table><thead><tr><th>Retirement age</th><th>Years to save</th><th>Total invested</th><th>Estimated balance</th><th>Today's dollars</th></tr></thead><tbody id="comparison"></tbody></table></div></div>
+<div class="card"><h2>Retirement income gap</h2><div class="income-grid"><div class="income-box"><div class="small">Monthly income goal</div><div class="income-number" id="incomeGoal">$3,000</div></div><div class="income-box"><div class="small">Estimated monthly income entered</div><div class="income-number" id="incomeEntered">$1,200</div></div><div class="income-box"><div class="small">Estimated monthly gap</div><div class="income-number gap-number" id="incomeGap">$1,800</div></div><div class="income-box"><div class="small">Income above goal</div><div class="income-number" id="incomeSurplus">$0</div></div></div><p class="small">This compares only the income amounts you entered. It does not calculate a safe withdrawal from your investments.</p></div>
+<div class="notice"><strong>What this estimate means</strong><br>Results are projections based on your assumptions, not guarantees. Real investment returns vary. Taxes, fees, changing contributions, and withdrawal strategy are not included. Social Security benefits depend on your earnings record and claiming age; check your estimate with the <a href="https://www.ssa.gov/benefits/calculators/" target="_blank" rel="noopener noreferrer">Social Security Administration</a>.</div>
+</section></div>
+<section class="card tools-card" style="margin-top:20px" aria-labelledby="other-tools-title">
+<h2 id="other-tools-title">More retirement tools</h2>
+<div class="field-grid">
+<div>
+<h3>Australia Retirement Calculator</h3>
+<p class="small">Explore super, savings, inflation-adjusted retirement balances and a simplified Age Pension estimate.</p>
+<a href="australia-retirement-calculator/">Open Australia calculator →</a>
+</div>
+<div>
+<h3>UK Pension Tax Calculator</h3>
+<p class="small">Estimate UK income tax on pension income for supported standard cases in the 2026–27 tax year.</p>
+<a href="uk-retirement-calculator/">Open UK pension tax calculator →</a>
+</div>
+</div>
+</section>
+</main>
+<footer>RetireAtlas provides educational estimates, not financial, tax, or legal advice. All calculations run in your browser in this prototype.
+<p class="site-links"><a href="privacy-policy/">Privacy Policy</a> · <a href="about/">About</a> · <a href="contact/">Contact</a></p>
+</footer>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const form = $('retirement-form');
+  const error = $('error');
+  const money = value => new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', maximumFractionDigits:0}).format(Number.isFinite(value) ? value : 0);
+  const num = id => Number($(id).value);
+
+  function fvCalc(principal, monthly, annualReturn, years) {
+    const months = Math.max(0, Math.round(years * 12));
+    const rate = annualReturn / 100;
+    if (months === 0) return principal;
+    if (Math.abs(rate) < 1e-12) return principal + monthly * months;
+    const monthlyRate = Math.pow(1 + rate, 1 / 12) - 1;
+    if (Math.abs(monthlyRate) < 1e-12) return principal + monthly * months;
+    return principal * Math.pow(1 + monthlyRate, months) + monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+  }
+
+  function validate() {
+    const fields = ['currentAge','retirementAge','savings','monthly','returnRate','inflation','goal','social','other'];
+    for (const id of fields) {
+      const el = $(id), value = Number(el.value);
+      const label = form.querySelector(`label[for="${id}"]`).textContent;
+      if (el.value.trim() === '' || !Number.isFinite(value)) return `${label}: please enter a valid number.`;
+      if (el.validity.rangeUnderflow || el.validity.rangeOverflow || el.validity.stepMismatch) return `${label}: please check the value entered.`;
+    }
+    if (num('retirementAge') < num('currentAge')) return 'Retirement age must be equal to or greater than your current age.';
+    if (num('currentAge') < 18) return 'Current age must be at least 18 for this calculator.';
+    if (num('returnRate') <= -100) return 'Expected annual return must be greater than -100%.';
+    return '';
+  }
+
+  function shortMoney(value) {
+    if (value >= 1e6) return '$' + (value / 1e6).toFixed(1) + 'M';
+    if (value >= 1000) return '$' + (value / 1000).toFixed(0) + 'k';
+    return '$' + Math.round(value);
+  }
+
+  function drawChart(principal, monthly, annualReturn, years) {
+    const canvas = $('growthChart');
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.max(1, window.devicePixelRatio || 1);
+    const width = Math.max(280, rect.width || 600), height = 250;
+    canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+    const pad = {l:58, r:14, t:16, b:34}, chartW = width - pad.l - pad.r, chartH = height - pad.t - pad.b;
+    const count = Math.max(1, Math.min(60, Math.ceil(years)));
+    const points = [];
+    for (let k = 0; k <= count; k++) {
+      const year = years * k / count;
+      points.push({x:pad.l + chartW * k / count, value:fvCalc(principal, monthly, annualReturn, year), year});
+    }
+    const maxValue = Math.max(1, ...points.map(p => p.value)) * 1.1;
+    const y = value => pad.t + chartH - (value / maxValue) * chartH;
+    ctx.font = '11px system-ui'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    for (let j = 0; j <= 4; j++) {
+      const value = maxValue * j / 4, yy = y(value);
+      ctx.strokeStyle = '#e4ebf3'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(pad.l, yy); ctx.lineTo(width - pad.r, yy); ctx.stroke();
+      ctx.fillStyle = '#637188'; ctx.fillText(shortMoney(value), pad.l - 8, yy);
+    }
+    ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 3; ctx.beginPath();
+    points.forEach((point, index) => { const yy = y(point.value); if (index === 0) ctx.moveTo(point.x, yy); else ctx.lineTo(point.x, yy); }); ctx.stroke();
+    const last = points[points.length - 1]; ctx.fillStyle = '#087f72'; ctx.beginPath(); ctx.arc(last.x, y(last.value), 4, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#637188'; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    const ticks = years === 0 ? [0] : [0, years / 2, years];
+    ticks.forEach(year => { const x = pad.l + (years ? year / years : 0) * chartW; ctx.fillText(String(Math.round(num('currentAge') + year)), x, height - pad.b + 9); });
+    ctx.fillText('Age', pad.l + chartW / 2, height - 15);
+  }
+
+  function calc() {
+    const current = num('currentAge'), retirement = num('retirementAge');
+    const principal = num('savings'), monthly = num('monthly'), annualReturn = num('returnRate'), inflationRate = num('inflation') / 100;
+    const years = retirement - current;
+    const futureValue = fvCalc(principal, monthly, annualReturn, years);
+    const realValue = futureValue / Math.pow(1 + inflationRate, years);
+    const invested = principal + monthly * years * 12;
+    $('futureValue').textContent = money(futureValue);
+    $('totalContrib').textContent = money(invested);
+    $('todayValue').textContent = money(realValue);
+    $('incomeGoal').textContent = money(num('goal'));
+    const income = num('social') + num('other');
+    $('incomeEntered').textContent = money(income);
+    $('incomeGap').textContent = money(Math.max(0, num('goal') - income));
+    $('incomeSurplus').textContent = money(Math.max(0, income - num('goal')));
+    $('comparison').innerHTML = [55, 60, 65, 67].map(age => {
+      if (age < current) return `<tr><td>${age}</td><td colspan="4" style="text-align:left">Already below your current age</td></tr>`;
+      const yearsToSave = age - current;
+      const balance = fvCalc(principal, monthly, annualReturn, yearsToSave);
+      const todayDollars = balance / Math.pow(1 + inflationRate, yearsToSave);
+      const totalInvested = principal + monthly * yearsToSave * 12;
+      const selected = age === retirement ? ' class="selected-row"' : '';
+      return `<tr${selected}><td>${age}</td><td>${yearsToSave}</td><td>${money(totalInvested)}</td><td>${money(balance)}</td><td>${money(todayDollars)}</td></tr>`;
+    }).join('');
+    drawChart(principal, monthly, annualReturn, years);
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const message = validate();
+    if (message) { error.textContent = message; error.style.display = 'block'; return; }
+    error.textContent = ''; error.style.display = 'none';
+    calc();
+  });
+
+  // Reset all fields to their HTML defaults, clear errors, and recalculate once.
+  $('reset').addEventListener('click', () => {
+    form.reset();
+    error.textContent = '';
+    error.style.display = 'none';
+    calc();
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const message = validate();
+      if (!message) drawChart(num('savings'), num('monthly'), num('returnRate'), num('retirementAge') - num('currentAge'));
+    }, 100);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
+
