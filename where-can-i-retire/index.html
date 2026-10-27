@@ -1,0 +1,1284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore eight retirement destinations across Europe, Asia and the Americas. Compare city lifestyles, climate, healthcare resources and national cost-of-living context.">
+<meta name="theme-color" content="#6d5ce7">
+<title>Where Can I Retire? | RetireAtlas</title>
+<style>
+:root {
+  --purple:#6d5ce7;
+  --dark:#24213a;
+  --muted:#6b7280;
+  --light:#f7f6ff;
+  --border:#e7e5f2;
+  --white:#ffffff;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--dark);
+  background:#fff;
+  font-size:19px;
+  line-height:1.6;
+}
+a { color:var(--purple); }
+a:focus-visible,button:focus-visible {
+  outline:3px solid #b6adff;
+  outline-offset:3px;
+}
+header {
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+}
+.nav {
+  max-width:1120px;
+  margin:auto;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+.logo {
+  color:var(--dark);
+  font-size:22px;
+  font-weight:800;
+  text-decoration:none;
+  letter-spacing:-.5px;
+}
+.logo span { color:var(--purple); }
+.nav a:last-child {
+  text-decoration:none;
+  font-weight:700;
+}
+.hero {
+  background:linear-gradient(135deg,#f5f2ff,#fff 65%,#f0edff);
+  padding:65px 22px 58px;
+  text-align:center;
+}
+.hero-inner { max-width:800px; margin:auto; }
+.eyebrow {
+  color:var(--purple);
+  text-transform:uppercase;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:2px;
+}
+h1 {
+  font-size:clamp(34px,6vw,54px);
+  line-height:1.12;
+  letter-spacing:-1.5px;
+  margin:14px 0;
+}
+.hero p {
+  color:var(--muted);
+  font-size:18px;
+  max-width:680px;
+  margin:0 auto 25px;
+}
+.button {
+  display:inline-block;
+  background:var(--purple);
+  color:#fff;
+  border:0;
+  border-radius:10px;
+  padding:13px 21px;
+  text-decoration:none;
+  font-weight:700;
+  cursor:pointer;
+}
+main {
+  max-width:1120px;
+  margin:auto;
+  padding:35px 22px 65px;
+}
+.section { margin:0 0 48px; }
+.section h2 {
+  font-size:clamp(25px,4vw,34px);
+  line-height:1.25;
+  margin:0 0 12px;
+  letter-spacing:-.5px;
+}
+.intro { color:var(--muted); max-width:780px; font-size:19px; line-height:1.6; }
+.country-nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:22px 0 0;
+}
+.country-nav a {
+  padding:9px 16px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:white;
+  text-decoration:none;
+  font-weight:700;
+}
+.index-table-wrap {
+  overflow-x:auto;
+  margin:20px 0 12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  -webkit-overflow-scrolling:touch;
+}
+.index-table {
+  width:100%;
+  min-width:650px;
+  border-collapse:collapse;
+  text-align:left;
+  font-size:15px;
+}
+.index-table th,
+.index-table td {
+  padding:12px 14px;
+  border-bottom:1px solid var(--border);
+}
+.index-table th {
+  background:var(--light);
+  font-size:13px;
+  line-height:1.4;
+}
+.index-table tbody tr:last-child td { border-bottom:0; }
+.index-table td:not(:first-child),
+.index-table th:not(:first-child) { text-align:right; font-variant-numeric:tabular-nums; }
+.index-note { color:var(--muted); font-size:16px; line-height:1.55; }
+.country {
+  padding:30px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  margin-bottom:35px;
+  scroll-margin-top:20px;
+}
+.country-heading {
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:18px;
+}
+.flag {
+  font-size:35px;
+  line-height:1.2;
+}
+.country h2 { margin:0; }
+.country-subtitle { color:var(--muted); margin:4px 0 0; font-size:19px; line-height:1.6; }
+.stats {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:22px 0;
+}
+.stat {
+  padding:18px;
+  background:var(--light);
+  border-radius:12px;
+}
+.stat-label {
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+}
+.stat strong {
+  display:block;
+  font-size:clamp(20px,3vw,28px);
+  margin:5px 0;
+}
+.stat small { color:var(--muted); }
+.note {
+  padding:15px 17px;
+  border-left:4px solid var(--purple);
+  background:#faf9ff;
+  border-radius:0 10px 10px 0;
+  font-size:16px;
+  line-height:1.6;
+}
+.country-info {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin:22px 0;
+}
+.info-box {
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:18px;
+}
+.info-box h3 { margin:0 0 8px; font-size:18px; }
+.info-box p { margin:0 0 10px; color:var(--muted); font-size:19px; line-height:1.6; }
+.info-box a { font-weight:700; }
+.city-heading { margin:28px 0 14px; }
+.city-heading h3 { margin:0; font-size:22px; }
+.city-heading p { color:var(--muted); margin:4px 0; font-size:18px; line-height:1.6; }
+.city-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.city-card {
+  padding:19px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  background:#fff;
+}
+.city-card h4 { margin:0 0 8px; font-size:19px; }
+.city-photo {
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  border-radius:10px;
+  margin:0 0 14px;
+  background:#f1effb;
+}
+.photo-credit { display:block; font-size:14px; line-height:1.5; color:var(--muted); margin:-8px 0 12px; overflow-wrap:anywhere; }
+.photo-credit a { font-size:14px; font-weight:400; text-decoration:underline; }
+.photo-modification { color:var(--muted); }
+.country-photo {
+  display:block;
+  width:100%;
+  max-height:320px;
+  aspect-ratio:16 / 7;
+  object-fit:cover;
+  border-radius:14px;
+  margin:18px 0 20px;
+  background:#f1effb;
+}
+.country-photo-credit { display:block; text-align:right; font-size:14px; line-height:1.5; color:var(--muted); margin:-14px 0 18px; overflow-wrap:anywhere; }
+.country-photo-credit a { font-size:14px; font-weight:400; }
+.city-card p { margin:0 0 12px; color:#55566a; font-size:19px; line-height:1.6; }
+.city-card a {
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+}
+.city-card a:hover { text-decoration:underline; }
+.links { display:flex; flex-wrap:wrap; gap:12px; }
+footer {
+  border-top:1px solid var(--border);
+  background:var(--light);
+  padding:30px 22px;
+  text-align:center;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+}
+footer a { font-weight:700; }
+@media(max-width:650px) {
+  .hero { padding:48px 19px; }
+  main { padding:28px 16px 45px; }
+  .country { padding:19px; }
+  .stats,.country-info,.city-grid { grid-template-columns:1fr; }
+  .nav { padding:15px 17px; }
+  .logo { font-size:20px; }
+}
+
+.currency-converter{margin:1rem 0 1.5rem;padding:1rem;border:1px solid #e5e1fb;border-radius:14px;background:#faf9ff}
+.currency-converter h3{margin:0 0 .35rem;color:var(--dark);font-size:1.05rem}
+.converter-intro,.converter-rate-note{font-size:.88rem;color:var(--muted);margin:.35rem 0 .75rem}
+.converter-controls{display:grid;grid-template-columns:minmax(100px,1.2fr) minmax(130px,1fr) auto minmax(130px,1fr);gap:.65rem;align-items:end}
+.converter-controls label{display:flex;flex-direction:column;gap:.3rem;font-size:.88rem;font-weight:600;color:var(--dark)}
+.converter-controls input,.converter-controls select{width:100%;min-width:0;box-sizing:border-box;padding:.65rem;border:1px solid #d7d2ec;border-radius:8px;background:#fff;color:#24213a;font:inherit}
+.converter-swap{padding:.62rem .75rem;border:0;border-radius:8px;background:var(--purple);color:#fff;font-size:1.1rem;cursor:pointer}
+.converter-result{font-weight:700;color:var(--dark);margin:.8rem 0 .3rem;overflow-wrap:anywhere}
+.converter-result.error{font-weight:500;color:#9b1c1c}
+@media(max-width:560px){.converter-controls{grid-template-columns:1fr 1fr}.converter-swap{grid-column:1/-1;grid-row:2;justify-self:center}.converter-controls label:nth-of-type(3){grid-column:1/-1}}
+
+
+.research-links{margin:1rem 0 1.5rem;padding:1rem 1.1rem;border:1px solid #e5e1fb;border-radius:14px;background:#fff}
+.research-links h3{margin:0 0 .6rem;color:var(--dark);font-size:1.02rem}
+.research-links ul{margin:0;padding-left:1.2rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem 1.5rem}
+.research-links li{padding-left:.1rem}
+.research-links a{font-weight:700;color:var(--purple);text-underline-offset:3px}
+.research-links p{margin:.3rem 0 0;color:var(--muted);font-size:.88rem;line-height:1.5}
+@media(max-width:560px){.research-links ul{grid-template-columns:1fr}}
+</style>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"80b34a467198469e92e3636312d38b9f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="#top">Retire<span>Atlas</span></a>
+    <a href="#destinations">Explore countries ↓</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">Your retirement journey starts here</div>
+    <h1>Where Can I Retire?</h1>
+    <p>Explore eight countries with different climates, cultures and ways of life. Compare example cities, consider healthcare and practical needs, and use the linked resources to guide your own research.</p>
+    <a class="button" href="#destinations">Explore destinations</a>
+  </div>
+</section>
+
+<main>
+<section class="section" id="destinations">
+  <h2>Explore eight retirement destinations</h2>
+  <p class="intro">Every country offers a different mix of climate, pace of life, urban services and regional character. Explore five example cities in each destination. These are starting points for research, not a ranking or a guarantee that a place will suit every retiree.</p>
+  <div class="note"><strong>About cost figures:</strong> Household averages provide context, not a personal retirement budget. Survey years, household definitions and included costs differ between countries, so these figures should not be treated as a like-for-like country ranking. Check the linked official source for the original definition and latest publication.</div>
+  <div class="country-nav">
+    <a href="#portugal">🇵🇹 Portugal</a>
+    <a href="#thailand">🇹🇭 Thailand</a>
+    <a href="#spain">🇪🇸 Spain</a>
+    <a href="#mexico">🇲🇽 Mexico</a>
+    <a href="#malaysia">🇲🇾 Malaysia</a>
+    <a href="#panama">🇵🇦 Panama</a>
+    <a href="#united-states">🇺🇸 United States</a>
+    <a href="#united-kingdom">🇬🇧 United Kingdom</a>
+  </div>
+</section>
+
+<section class="country" id="portugal">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇵🇹</div>
+    <div>
+      <h2>Portugal</h2>
+      <p class="country-subtitle">Atlantic beaches, historic cities and a wide choice of coastal, island and inland lifestyles.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/A%20Panoramic%20View%20of%20Porto%27s%20Ribeira%20District%20(55246977394).jpg?width=1400" alt="Sunny panoramic view of Porto’s historic Ribeira district, terracotta rooftops and the Douro River" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:A_Panoramic_View_of_Porto%27s_Ribeira_District_(55246977394).jpg" target="_blank" rel="noopener">A Panoramic View of Porto's Ribeira District (55246977394)</a> by Michael Gaylard · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Portugal combines Atlantic coastline, historic towns, island communities and larger cities with established public services. The Algarve is known for its sunnier, drier climate, while northern areas are generally greener and wetter and inland summers can be very hot. Daily life varies considerably between compact old towns, car-dependent suburbs and busy metropolitan neighbourhoods. Retirees should compare housing availability, winter damp, summer heat, transport and access to the specific healthcare services they may need rather than treating the country as one uniform destination.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household expenditure</span>
+      <strong>€23,900/year</strong>
+      <small>Portugal · 2022/23 survey</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate monthly equivalent</span>
+      <strong>€1,992/month</strong>
+      <small>Annual figure divided by 12</small>
+    </div>
+  </div>
+  <div class="note">This is a national household average, not a recommended retirement budget or an estimate for one person. Housing, household size and location can make a substantial difference. Source: <a href="https://www.ine.pt/ine_novidades/semin/INEWS60/78-79/" target="_blank" rel="noopener noreferrer">Statistics Portugal (INE), 2022/23 household expenditure survey ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="portugal safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://criminalidade.pt/en/charts/" target="_blank" rel="noopener noreferrer">Safety & local crime information</a><p>Municipal recorded-crime data; figures need context and are not a personal-safety score.</p></li>
+      <li><a href="https://www.gov.pt/pt/servicos/pedir-um-visto-de-residencia-para-fixacao-de-residencia-de-reformados-religiosos-e-pessoas-que-vivem-de-rendimentos-proprios" target="_blank" rel="noopener noreferrer">Official residence visa for retirees and people living on their own income</a><p>Government guidance for non-EU/EEA/Swiss applicants. Check the latest document list and requirements with the Portuguese consular office responsible for your application.</p></li>
+    </ul>
+  </div>
+  <div class="country-info">
+    <div class="info-box">
+      <h3>☀️ Climate</h3>
+      <p>Southern areas are generally warmer and drier. The north is usually wetter, and inland temperatures can vary considerably by season.</p>
+      <a href="https://www.ipma.pt/pt/oclima/normais.clima/" target="_blank" rel="noopener">Official climate data ↗</a>
+    </div>
+    <div class="info-box">
+      <h3>🏥 Healthcare</h3>
+      <p>Explore Portugal's public health service and check eligibility, local services and private options before making plans.</p>
+      <div class="links">
+        <a href="https://www.sns.gov.pt/" target="_blank" rel="noopener">SNS public health ↗</a>
+        <a href="https://www.ers.pt/" target="_blank" rel="noopener">Health regulator ↗</a>
+      </div>
+    </div>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 48.7</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading">
+    <h3>Five cities and towns to explore</h3>
+    <p>Examples to research, not a ranking.</p>
+  </div>
+  <div class="city-grid">
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tavira%20Ponte%20Romana%20R02.jpg?width=1200" alt="Tavira's historic old bridge, Ponte Romana, crossing the Gilão River in Portugal" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tavira_Ponte_Romana_R02.jpg" target="_blank" rel="noopener noreferrer">Tavira Ponte Romana R02</a> by Marc Ryckaert · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Tavira</h4>
+      <p>Tavira is a smaller eastern Algarve town known for its whitewashed buildings, riverside streets, historic bridges and access to the Ria Formosa islands and beaches. It can suit people who prefer a calmer scale than a large resort, with cafés, markets and everyday services close to the centre. Summers are hot and sunny, while the town is quieter outside peak season; check year-round transport, housing availability and how you would reach larger hospitals for specialist care.</p>
+      <a href="https://www.sns.gov.pt/entidades-de-saude/unidade-local-de-saude-do-algarve/" target="_blank" rel="noopener noreferrer">Hospital de Faro (regional public hospital in Faro; official SNS directory) ↗</a>
+      <a href="https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-faro" target="_blank" rel="noopener noreferrer">Hospital CUF Faro (regional private hospital in Faro) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Funchal.%20Portugal%2C%20Autonomous%20Region%20of%20Madeira%2C%20Southwestern%20Europe.jpg?width=1200" alt="View across Funchal, Madeira, Portugal" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:View_of_Funchal._Portugal,_Autonomous_Region_of_Madeira,_Southwestern_Europe.jpg" target="_blank" rel="noopener noreferrer">View of Funchal. Portugal, Autonomous Region of Madeira, Southwestern Europe</a> by Mstyslav Chernov · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Funchal</h4>
+      <p>Madeira’s capital combines a working city, seafront promenades, gardens, markets and a busy calendar of cultural events. The island’s maritime climate is generally milder than much of mainland Portugal, although hillside neighbourhoods can be steep and weather can change quickly with elevation. Funchal has the island’s broadest concentration of services, but island living means some specialist treatment or family visits may require travel to the mainland. Consider slope, accessibility, public transport and the cost of flights as part of the long-term picture.</p>
+      <a href="https://www.sesaram.pt/portal/o-sesaram/o-sesaram/as-nossas-unidades/hospitais/hospital-dr-nelio-mendonca" target="_blank" rel="noopener noreferrer">Hospital Dr. Nélio Mendonça (public) ↗</a>
+      <a href="https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-madeira" target="_blank" rel="noopener noreferrer">Hospital CUF Madeira (private) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Braga%20Panorama.jpg?width=900" alt="Panorama of Braga, Portugal" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Braga_Panorama.jpg" target="_blank" rel="noopener noreferrer">Braga Panorama</a> by Otto Domes · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Braga</h4>
+      <p>Braga is a northern city with a historic centre, religious heritage, university life, shopping and a growing modern edge. It offers a more urban routine than a small coastal town, with cafés, public services and connections to other northern cities. Winters are typically wetter and cooler than in the Algarve, and summer days can still be hot. People considering Braga should explore neighbourhoods on foot, check local public transport and compare access to the services they use most often.</p>
+      <a href="https://www.hospitaldebraga.pt/hospital/contactos-localizacao-e-acessos" target="_blank" rel="noopener noreferrer">Hospital de Braga (public · official address and contacts) ↗</a>
+      <a href="https://www.trofasaude.pt/bragasul/hospital/" target="_blank" rel="noopener noreferrer">Trofa Saúde Braga Sul (private) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Yellow%20tram%20in%20Lisbon%2C%20Portugal.jpg?width=900" alt="A classic yellow Lisbon tram on a historic city street" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Yellow_tram_in_Lisbon,_Portugal.jpg" target="_blank" rel="noopener noreferrer">Yellow tram in Lisbon, Portugal</a> by Bex Walton · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Lisbon</h4>
+      <p>Lisbon offers the country’s widest range of cultural venues, international connections, restaurants and specialist services, with metro, rail, bus and ferry links across the metropolitan area. Its hills, older pavements and busy tourist districts can make some neighbourhoods less comfortable for people with mobility concerns, while housing costs are often higher than in smaller cities. Look at the whole daily routine—not just the central sights—including lift access, local shops, noise, summer heat and the journey to your preferred hospital or airport.</p>
+      <a href="https://www.ulssm.min-saude.pt/como-chegar/" target="_blank" rel="noopener noreferrer">Hospital de Santa Maria (public) ↗</a>
+      <a href="https://www.hospitaldaluz.pt/lisboa/en/for-clients/how-to-make-an-appointment" target="_blank" rel="noopener noreferrer">Hospital da Luz Lisboa (private · official address and contact information) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coimbra%20panoramica.JPG?width=900" alt="Panoramic view of Coimbra, Portugal" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Coimbra_panoramica.JPG" target="_blank" rel="noopener noreferrer">Coimbra panoramica</a> by Carlos Luis M C da Cruz · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Coimbra</h4>
+      <p>Coimbra is a historic university city with a lively cultural calendar, riverfront areas and important healthcare and educational institutions. It has a smaller-city feel than Lisbon or Porto while still providing many urban amenities. The old centre is hilly, so neighbourhood choice matters if you want to walk for most errands; summers can be hot and winters damp. Compare residential areas near everyday services and transport rather than assuming every part of the city is equally accessible.</p>
+      <a href="https://www.chuc.min-saude.pt/" target="_blank" rel="noopener noreferrer">Hospitais da Universidade de Coimbra (public) ↗</a>
+      <a href="https://www.cuf.pt/hospitais-e-clinicas/hospital-cuf-coimbra" target="_blank" rel="noopener noreferrer">Hospital CUF Coimbra (private) ↗</a>
+    </article>
+  </div>
+</section>
+
+<section class="country" id="thailand">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇹🇭</div>
+    <div>
+      <h2>Thailand</h2>
+      <p class="country-subtitle">A varied tropical country with lively cities, northern mountains and long coastlines.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ko%20Tapu%20(James%20Bond)%20Island%20in%20Phang%20Nga%20Bay%2C%20Thailand.jpg?width=1400" alt="Ko Tapu, the iconic limestone island in the turquoise waters of Phang Nga Bay, Thailand" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Ko_Tapu_(James_Bond)_Island_in_Phang_Nga_Bay,_Thailand.jpg" target="_blank" rel="noopener">Ko Tapu (James Bond) Island in Phang Nga Bay, Thailand</a> by Vyacheslav Argenberg · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Thailand offers a broad range of lifestyles, from the scale and specialist services of Bangkok to northern cultural centres, quieter seaside towns and island communities. Heat and humidity are common, but rainfall, seasonal air quality and local conditions differ by region. Everyday life may feel convenient and sociable in established urban areas, while island or rural living can mean longer journeys for specialist services. Before choosing a location, research long-stay visa requirements, health insurance, hospital access, air quality, transport and how comfortable you feel navigating daily life across language and cultural differences.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household expenditure</span>
+      <strong>฿22,420/month</strong>
+      <small>Thailand · NSO 2025 figure</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate annual equivalent</span>
+      <strong>฿269,040/year</strong>
+      <small>Monthly figure multiplied by 12</small>
+    </div>
+  </div>
+  <div class="note">This is average household expenditure, not an individual retirement budget. Costs vary by region, housing, household size and lifestyle. Source: <a href="https://www.nso.go.th/nsoweb/downloadFile/survey/fZl/20260505141117_55523.pdf" target="_blank" rel="noopener noreferrer">Thailand National Statistical Office, 2025 Household Socio-Economic Survey ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="thailand safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://www.oja.go.th/justicedata/" target="_blank" rel="noopener noreferrer">Safety & crime information</a><p>Thai justice and crime statistics; indicators and reporting periods may differ.</p></li>
+      <li><a href="https://www.thaievisa.go.th/" target="_blank" rel="noopener noreferrer">Official Thai e-Visa portal (Ministry of Foreign Affairs)</a><p>Select the relevant retirement category and confirm current eligibility and documents with the responsible Thai embassy or consulate before applying.</p></li>
+    </ul>
+  </div>
+  <div class="country-info">
+    <div class="info-box">
+      <h3>🌦️ Climate</h3>
+      <p>Hot weather occurs throughout much of the year. Rainfall and seasonal air quality differ by region; northern cities can experience seasonal haze.</p>
+      <a href="https://www.tmd.go.th/en" target="_blank" rel="noopener">Thai Meteorological Department ↗</a>
+    </div>
+    <div class="info-box">
+      <h3>🏥 Healthcare</h3>
+      <p>Compare public and private facilities, insurance requirements, treatment costs and language support.</p>
+      <div class="links">
+        <a href="https://www.moph.go.th/" target="_blank" rel="noopener">Ministry of Public Health ↗</a>
+        <a href="https://www.hss.moph.go.th/" target="_blank" rel="noopener">Health Service Support ↗</a>
+      </div>
+    </div>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 36.8</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading">
+    <h3>Five cities to explore</h3>
+    <p>Examples to research, not a ranking.</p>
+  </div>
+  <div class="city-grid">
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Doi%20Suthep%20Temple%20Chiang%20Mai%20Thailand.jpg?width=1200" alt="Golden chedi of Wat Phra That Doi Suthep temple surrounded by green mountain forest in Chiang Mai" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Doi_Suthep_Temple_Chiang_Mai_Thailand.jpg" target="_blank" rel="noopener noreferrer">Doi Suthep Temple Chiang Mai Thailand</a> by Philip Nalangan · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Chiang Mai</h4>
+      <p>Chiang Mai blends a historic old city, temples, markets, cafés, universities and access to northern Thailand’s mountains and countryside. It offers a slower rhythm than Bangkok while retaining private hospitals, shopping and an established international community. The key trade-off is seasonal air pollution, which can become severe during parts of the dry season, alongside hot weather and periods of heavy rain. Anyone with respiratory concerns should review seasonal air-quality data and consider a plan for spending the worst periods elsewhere.</p>
+      <a href="https://w2.med.cmu.ac.th/opd/er-eng/" target="_blank" rel="noopener noreferrer">Maharaj Nakorn Chiang Mai Hospital (public) ↗</a>
+      <a href="https://www.bangkokhospital.com/en/chiangmai/contact/head-office" target="_blank" rel="noopener noreferrer">Bangkok Hospital Chiang Mai (private) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok%2C%20Thailand%2C%20Chao%20Praya%2C%202024.jpg?width=1200" alt="Bangkok skyline beside the Chao Phraya River at dusk, with modern high-rise buildings and river views" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Bangkok,_Thailand,_Chao_Praya,_2024.jpg" target="_blank" rel="noopener noreferrer">Bangkok, Thailand, Chao Praya, 2024</a> by OPK-Photography · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Bangkok</h4>
+      <p>Bangkok is a vast, energetic capital with a deep range of hospitals, specialist clinics, shopping, restaurants, cultural venues and international flight connections. The BTS Skytrain and MRT make some districts easier to navigate, but traffic, heat, air pollution, crowds and long travel times can shape everyday comfort. Neighbourhood choice is crucial: living close to a station, supermarket and preferred medical provider may matter more than being near a famous landmark. Compare building accessibility, noise, flood exposure and insurance coverage before committing.</p>
+      <a href="https://www.si.mahidol.ac.th/sirirajhospital/" target="_blank" rel="noopener noreferrer">Siriraj Hospital (public) ↗</a>
+      <a href="https://www.bumrungrad.com/en/contact-us/contact-details" target="_blank" rel="noopener noreferrer">Bumrungrad International Hospital (private · official address and contacts) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/01%20Hua%20Hin%20Beach.jpg?width=900" alt="Hua Hin beach in Thailand" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:01_Hua_Hin_Beach.jpg" target="_blank" rel="noopener noreferrer">01 Hua Hin Beach</a> by Elmschrat · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Hua Hin</h4>
+      <p>Hua Hin is a coastal town with a long-established domestic holiday scene, seafood markets, golf courses and residential areas that range from the busy centre to quieter outskirts. It offers beach access without the scale of Bangkok, although a car or taxi may be useful for errands outside central areas. Heat and humidity are persistent, and the sea is not equally suitable for swimming at all times of year. Check the location of hospitals, the quality of local transport and how easily you can reach Bangkok for complex specialist care.</p>
+      <a href="https://huahinhospital.moph.go.th/" target="_blank" rel="noopener noreferrer">Hua Hin Hospital (public; official homepage with address and phone) ↗</a>
+      <a href="https://www.bangkokhospital.com/en/huahin/about-us/our-story-bhn" target="_blank" rel="noopener noreferrer">Bangkok Hospital Hua Hin (private) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Phuket%20old%20town%20(52549766215).jpg?width=900" alt="Historic streets of Phuket Old Town, Thailand" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Phuket_old_town_(52549766215).jpg" target="_blank" rel="noopener noreferrer">Phuket old town (52549766215)</a> by Mussi Katz · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Phuket</h4>
+      <p>Phuket offers beaches, international restaurants, shopping and a range of residential communities, from busy tourist districts to quieter inland and southern areas. It has private hospitals and an international airport, but the island is spread out and traffic can make cross-island journeys slow. Costs and noise can rise in popular visitor areas, while the rainy season changes beach conditions and outdoor routines. Retirees should test the exact neighbourhood during both high and low seasons and consider transport, flooding, medical insurance and evacuation or referral arrangements.</p>
+      <a href="https://www.vachiraphuket.go.th/contact/telephone/" target="_blank" rel="noopener noreferrer">Vachira Phuket Hospital (public · official contact directory) ↗</a>
+      <a href="https://www.bangkokhospital.com/en/phuket/visit/facilities-bpk" target="_blank" rel="noopener noreferrer">Bangkok Hospital Phuket (private) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/DFC%204518%20Sun-soaked%20city%20beach%20with%20high-rise%20skyline%20palm%20trees%20and%20people%20enjoying%20a%20calm%20day%20by%20the%20water.jpg?width=900" alt="Pattaya beachfront promenade with palm trees, bay and city skyline" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:DFC_4518_Sun-soaked_city_beach_with_high-rise_skyline_palm_trees_and_people_enjoying_a_calm_day_by_the_water.jpg" target="_blank" rel="noopener noreferrer">DFC 4518 Sun-soaked city beach with high-rise skyline palm trees and people enjoying a calm day by the water</a> by PattayaPatrol · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Pattaya</h4>
+      <p>Pattaya is a sizeable coastal city with shopping centres, markets, restaurants, hospitals and connections to Bangkok and the Eastern Economic Corridor. It is more urban and commercially developed than many quiet beach towns, and the atmosphere varies sharply between neighbourhoods. Some areas are lively late into the night, while residential districts farther from the busiest strips can be calmer. Visit at different times of day, assess pavements and road crossings, and check that nearby healthcare services match your needs.</p>
+      <a href="https://www.bangkokhospital.com/en/pattaya" target="_blank" rel="noopener noreferrer">Bangkok Hospital Pattaya (private) ↗</a>
+      <a href="https://gis-health.moph.go.th/healthmap/info.php?maincode=10819" target="_blank" rel="noopener noreferrer">Pattaya Bhattamakun Hospital (public) ↗</a>
+    </article>
+  </div>
+</section>
+
+<section class="country" id="spain">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇪🇸</div>
+    <div>
+      <h2>Spain</h2>
+      <p class="country-subtitle">Mediterranean beaches, historic inland cities and varied regional climates.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Plaza%20de%20Espana%20de%20Sevilla.jpg?width=1400" alt="The ornate Plaza de España in Seville, showcasing distinctive Spanish architecture" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Plaza_de_Espana_de_Sevilla.jpg" target="_blank" rel="noopener">Plaza de Espana de Sevilla</a> by Gica-cobra · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Spain offers major metropolitan centres, lively coastal cities, smaller historic towns and inland regions with very different seasons. Mediterranean and southern coastal areas often have mild winters, while summer heat can be intense; northern Spain is generally greener and wetter, and inland areas may experience colder winters and larger temperature swings. Public transport is strong in many cities but varies between neighbourhoods and smaller towns. Retirees should look beyond holiday appeal and compare housing costs, summer comfort, walkability, local transport, language needs and eligibility for public or private healthcare.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household expenditure</span>
+      <strong>€35,101/year</strong>
+      <small>Spain · INE 2025 figure</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate monthly equivalent</span>
+      <strong>€2,925/month</strong>
+      <small>Annual figure divided by 12</small>
+    </div>
+  </div>
+  <div class="note">Spain's published household expenditure measure includes imputed rent for some owner-occupied or provided accommodation. This means the figure is not directly comparable with the Portugal or Thailand figures shown above. Source: <a href="https://ine.es/dyngs/Prensa/en/EPF2025.htm" target="_blank" rel="noopener noreferrer">Spain National Statistics Institute (INE), Household Budget Survey 2025 ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="spain safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://www.datoscrimen.es/" target="_blank" rel="noopener noreferrer">Safety & local crime information</a><p>Municipal crime data based on official sources; coverage and reporting limitations apply.</p></li>
+      <li><a href="https://inclusion.gob.es/en/web/migraciones/w/autorizacion-inicial-de-residencia-temporal-no-lucrativa" target="_blank" rel="noopener noreferrer">Visa & residency information</a><p>Official non-lucrative residence guidance for people who will not work; check the current consular checklist.</p></li>
+    </ul>
+  </div>
+  <div class="country-info">
+    <div class="info-box">
+      <h3>☀️ Climate</h3>
+      <p>Mediterranean coastal areas often have mild winters and hot summers. Inland and southern cities can experience intense summer heat.</p>
+      <a href="https://www.aemet.es/en/serviciosclimaticos/datosclimatologicos/valoresclimatologicos" target="_blank" rel="noopener">Official climate data ↗</a>
+    </div>
+    <div class="info-box">
+      <h3>🏥 Healthcare</h3>
+      <p>Spain has regional public health services. Eligibility and registration requirements depend on personal circumstances and residency status.</p>
+      <div class="links">
+        <a href="https://www.sanidad.gob.es/en/" target="_blank" rel="noopener">Health ministry ↗</a>
+        <a href="https://administracion.gob.es/" target="_blank" rel="noopener">Government services ↗</a>
+      </div>
+    </div>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 51.4</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading">
+    <h3>Five cities to explore</h3>
+    <p>Examples to research, not a ranking.</p>
+  </div>
+  <div class="city-grid">
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panor%C3%A1mica%20de%20la%20ciudad%20de%20Valencia%2C%20Espa%C3%B1a.jpg?width=900" alt="Panoramic view of Valencia, Spain" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_la_ciudad_de_Valencia,_Espa%C3%B1a.jpg" target="_blank" rel="noopener noreferrer">Panorámica de la ciudad de Valencia, España</a> by Juan Emilio Prades Bel · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Valencia</h4>
+      <p>Valencia combines a historic centre, major museums, a large park in the former Turia riverbed, beaches and a useful metro, tram and bus network. It is a substantial city with year-round services and a strong food culture, while many districts still feel neighbourhood-oriented. Summers are hot and humid at times, and some low-lying areas require attention to flood risk and local alerts. Compare access to shade, public transport, hospitals and everyday shops, and remember that the most popular central and coastal districts may command higher housing prices.</p>
+      <a href="https://lafe.san.gva.es/es/contacte" target="_blank" rel="noopener noreferrer">Hospital Universitari i Politècnic La Fe (public · official contact and address) ↗</a>
+      <a href="https://www.quironsalud.com/valencia/es/informacion-contacto" target="_blank" rel="noopener noreferrer">Hospital Quirónsalud Valencia (private · official contact and address) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A1laga%20City.jpg?width=900" alt="View of Málaga, Spain" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:M%C3%A1laga_City.jpg" target="_blank" rel="noopener noreferrer">Málaga City</a> by Triptosia · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Málaga</h4>
+      <p>Málaga is a lively Andalusian city with a historic core, museums, a port, beaches and a busy programme of cultural events. Its airport and rail connections are useful for visitors and residents who travel regularly, and the surrounding province offers smaller coastal and inland communities. Winters are usually mild, but summer heat can be intense and tourist demand affects some neighbourhoods. Check housing costs, noise, walkability and the distance from your home to public transport and healthcare facilities.</p>
+      <a href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/el-sas/servicios-y-centros/informacion-por-centros/16465" target="_blank" rel="noopener noreferrer">Hospital Universitario Regional de Málaga (public · official SAS address and contacts) ↗</a>
+      <a href="https://vithas.es/centro/vithas-hospital-malaga/" target="_blank" rel="noopener noreferrer">Hospital Vithas Málaga (private · official hospital page and address) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%20evening%20panorama%20Mirador%20San%20Nicolas%20sRGB-1.jpg?width=1200" alt="Panoramic view of the Alhambra palace and Generalife in Granada, Spain, with the Sierra Nevada mountains behind" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Alhambra_evening_panorama_Mirador_San_Nicolas_sRGB-1.jpg" target="_blank" rel="noopener noreferrer">Alhambra evening panorama Mirador San Nicolas sRGB-1</a> by Slaunger · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Granada</h4>
+      <p>Granada is known for its historic quarters, university atmosphere, gardens and views toward the Sierra Nevada. It offers a cultural, inland alternative to Spain’s coastal retirement centres, with mountain excursions nearby and a compact centre in many areas. Winters can be cold and summers very hot, so it has a wider seasonal range than much of the Mediterranean coast. The steep lanes of some old neighbourhoods may be challenging for mobility, making flatter districts, public transport and proximity to healthcare worth comparing.</p>
+      <a href="https://www.huvn.es/el_hospital/contacto" target="_blank" rel="noopener noreferrer">Hospital Universitario Virgen de las Nieves (public · official address and contacts) ↗</a>
+      <a href="https://vithas.es/centro/vithas-hospital-granada/" target="_blank" rel="noopener noreferrer">Hospital Vithas Granada (private · official hospital page and address) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama-view-Alicante.jpg?width=900" alt="Panoramic view of Alicante, Spain" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Panorama-view-Alicante.jpg" target="_blank" rel="noopener noreferrer">Panorama-view-Alicante</a> by acediscovery · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Alicante</h4>
+      <p>Alicante offers a working city, seafront promenade, beaches, markets, tram connections and an airport serving many European routes. Its size can provide a practical balance between coastal living and access to year-round services, while nearby Costa Blanca towns offer quieter alternatives. Summers are hot and sunny, and some districts are more car-dependent than they first appear. Explore outside the holiday season, compare public transport and local medical access, and check how exposed your preferred area is to heat and water restrictions.</p>
+      <a href="https://alicante.san.gva.es/es/como-llegar" target="_blank" rel="noopener noreferrer">Hospital General Universitario Dr. Balmis (public · official directions and address) ↗</a>
+      <a href="https://vithas.es/centro/vithas-hospital-alicante/" target="_blank" rel="noopener noreferrer">Hospital Vithas Alicante (private · official hospital page and address) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Seville%20panorama.jpg?width=900" alt="Panorama of Seville Cathedral, Spain" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Seville_panorama.jpg" target="_blank" rel="noopener noreferrer">Seville panorama</a> by Thomas Weyrauch · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Seville</h4>
+      <p>Seville is a major Andalusian city celebrated for its architecture, gardens, food, festivals and extensive historic centre. It offers the services and cultural life of a regional capital, with rail connections and an airport, but many residents adjust their routines around extreme summer heat. Shade, air conditioning, home insulation and the ability to avoid walking during the hottest hours are practical considerations, especially for older adults. Compare neighbourhoods for public transport, lift access, noise during festivals and proximity to clinics and hospitals.</p>
+      <a href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/el-sas/servicios-y-centros/informacion-por-centros/16477" target="_blank" rel="noopener noreferrer">Hospital Universitario Virgen del Rocío (public) ↗</a>
+      <a href="https://vithas.es/centro/vithas-hospital-sevilla/" target="_blank" rel="noopener noreferrer">Hospital Vithas Sevilla (private · Castilleja de la Cuesta, outside Seville city) ↗</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>How to compare destinations</h2>
+  <p class="intro">Before choosing a place, consider your actual monthly budget, housing, healthcare eligibility, insurance, climate preferences, transport, safety, visa rules and tax position. Visit during different seasons if possible.</p>
+  <div class="note">
+    <strong>Important:</strong> This page provides general information for early research. It does not rank countries, provide immigration or tax advice, or guarantee healthcare access. Confirm current details with official authorities before making a decision.
+  </div>
+</section>
+
+<section class="country" id="mexico">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇲🇽</div>
+    <div>
+      <h2>Mexico</h2>
+      <p class="country-subtitle">A large and diverse country of colonial cities, highland towns and Pacific and Caribbean coastlines.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mexico_City_Reforma_skyline.jpg?width=1400" alt="Wide skyline view of Mexico City" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Mexico_City_Reforma_skyline.jpg" target="_blank" rel="noopener noreferrer">Mexico City Reforma skyline</a> by Jonathan Salvador · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Mexico is not one retirement experience: altitude, climate, language, transport and access to medical care can be very different from one region to another. Highland cities may have mild days and cooler nights, while coastal destinations are often hot and humid. Larger cities and established retirement communities may offer private hospitals, international connections and social networks, but the right choice depends on the neighbourhood and the services you personally need. Learn enough Spanish for everyday tasks, check current official travel and safety advice for the specific state and city, and investigate residency, health insurance and tax matters independently. Renting for a season before buying can help you experience the climate and daily routine beyond the holiday areas.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household expenditure</span>
+      <strong>MXN 297,612/year</strong>
+      <small>Mexico · ENG 2025</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate monthly equivalent</span>
+      <strong>MXN 24,801/month</strong>
+      <small>Annual figure divided by 12</small>
+    </div>
+  </div>
+  <div class="note">INEGI's 2025 National Expenditure Survey reports average total current household expenditure. The average monthly monetary current expenditure was MXN 19,310. Figures describe households, not an individual retirement budget. <a href="https://www.inegi.org.mx/app/saladeprensa/noticia/11250" target="_blank" rel="noopener noreferrer">Official INEGI source ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="mexico safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://www.gob.mx/sesnsp/acciones-y-programas/datos-abiertos-de-incidencia-delictiva" target="_blank" rel="noopener noreferrer">Safety & local crime information</a><p>Official municipal crime datasets; reported cases are not the same as all crime experienced.</p></li>
+      <li><a href="https://www.miconsulado.sre.gob.mx/visasmexicanas/visa-category/residencia/" target="_blank" rel="noopener noreferrer">Official Mexican residence-visa portal</a><p>Official information on temporary and permanent residence visas, including options for retirees and pensioners; requirements and financial thresholds should be confirmed with the consulate handling the application.</p></li>
+    </ul>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 44.4</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading"><h3>Five cities and towns to explore</h3><p>Examples to research, not a ranking.</p></div>
+  <div class="city-grid">
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Paseo_de_Montejo%2C_Merida_Yucatan_Mexico_01.jpg?width=1200" alt="Historic buildings along Paseo de Montejo in Mérida, Yucatán, Mexico" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Paseo_de_Montejo,_Merida_Yucatan_Mexico_01.jpg" target="_blank" rel="noopener noreferrer">Paseo de Montejo, Merida Yucatan Mexico 01</a> by Nils &amp; Araceli Jonsson · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Mérida</h4><p>Mérida, the capital of Yucatán, is known for its historic centre, markets, cultural events and strong regional identity. It has grown into a service centre for the surrounding peninsula, with restaurants, shops and private medical options. The major consideration is climate: heat and humidity can be intense, particularly in the hottest months, so air conditioning, shade and reliable transport may be essential. Research neighbourhoods outside the busiest centre as well as access to specialist care and the distance to the coast.</p><a href="https://www.gob.mx/salud/hraepy" target="_blank" rel="noopener noreferrer">Hospital Regional de Alta Especialidad de la Península de Yucatán (public) ↗</a>
+      <a href="https://hospitalesmac.com/hospitales/hospital/merida" target="_blank" rel="noopener noreferrer">Hospital MAC Mérida (private) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parroquia_San_Miguel_Arc%C3%A1ngel_01.JPG?width=1200" alt="Parroquia San Miguel Arcángel church facade in San Miguel de Allende" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Parroquia_San_Miguel_Arc%C3%A1ngel_01.JPG" target="_blank" rel="noopener noreferrer">Parroquia San Miguel Arcángel 01</a> by Carlos Alonso Caballero Vallejo · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>San Miguel de Allende</h4><p>This highland city is admired for its colourful historic architecture, arts scene, galleries, restaurants and active international community. Its elevation usually brings a different feel from Mexico’s tropical coasts, with sunny days and cooler evenings. The historic centre has steep or uneven streets, and popularity with international residents can push up housing prices in sought-after areas. Compare quieter residential neighbourhoods, accessibility, water availability and the location of hospitals for routine and specialist treatment.</p><a href="https://hospitalesmac.com/hospitales/hospital/san-miguel-de-allende" target="_blank" rel="noopener noreferrer">Hospital MAC San Miguel de Allende (private) ↗</a>
+      <a href="https://boletines.guanajuato.gob.mx/2025/06/05/ssg-garantiza-atencion-a-134-mil-sanmiguelenses-que-no-tienen-imss-ni-issste/" target="_blank" rel="noopener noreferrer">Hospital General Felipe G. Dobarganes (public · official Guanajuato health authority information) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/El_Malec%C3%B3n_Puerto_Vallarta_%28228717327%29.jpeg?width=1200" alt="Beach and waterfront along the Malecón in Puerto Vallarta" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:El_Malec%C3%B3n_Puerto_Vallarta_%28228717327%29.jpeg" target="_blank" rel="noopener noreferrer">El Malecón Puerto Vallarta (228717327)</a> by Terry Lucas · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Puerto Vallarta</h4><p>Puerto Vallarta combines a Pacific bay, a walkable seafront promenade, restaurants, arts and access to outdoor activities. It has an established international community and air links that can be convenient for visitors and family. The climate is tropical, with a hotter, wetter period and seasonal changes in beach conditions; popular districts can be busy and more expensive than inland areas. Check the distance from a potential home to hospitals, grocery shops and transport, and consider how you would manage during the rainy season.</p><a href="https://hospitalcmq.com/contact/" target="_blank" rel="noopener noreferrer">Hospital CMQ — Puerto Vallarta locations (private · official contact and locations) ↗</a>
+      <a href="https://credencial.seguro.jalisco.gob.mx/unidades-salud" target="_blank" rel="noopener noreferrer">Hospital Regional de Puerto Vallarta (public; state health directory) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lago%20de%20Chapala%20desde%20el%20muelle%20de%20Ajijic.jpg?width=1200" alt="Lake Chapala viewed from the Ajijic waterfront pier" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Lago_de_Chapala_desde_el_muelle_de_Ajijic.jpg" target="_blank" rel="noopener noreferrer">Lago de Chapala desde el muelle de Ajijic</a> by YdelaT · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Ajijic and Lake Chapala</h4><p>Ajijic and neighbouring communities along Lake Chapala attract people who want a small-town setting, lakeside scenery and social activities rather than a large metropolis. The highland location generally offers more moderate temperatures than the coast, though rainy-season weather and cooler nights still matter. Local services are available, but complex medical needs may require travel to Guadalajara. Before settling, check transport options, air quality, water supply, the practicalities of the nearest hospital and whether the community feels comfortable outside the main expat areas.</p><a href="https://credencial.seguro.jalisco.gob.mx/unidades-salud" target="_blank" rel="noopener noreferrer">Hospital Comunitario de Jocotepec (regional public hospital; outside Ajijic) ↗</a>
+      <a href="https://www.hospitalsanantonio.com.mx/agendar" target="_blank" rel="noopener noreferrer">Hospital San Antonio del Lago de Chapala (private; official contact and address; San Antonio Tlayacapan) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20de%20Bellas%20Artes%2C%20Mexico%20City%2C%20MX.jpg?width=1200" alt="Palacio de Bellas Artes in Mexico City" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Palacio_de_Bellas_Artes,_Mexico_City,_MX.jpg" target="_blank" rel="noopener noreferrer">Palacio de Bellas Artes, Mexico City, MX</a> by Timothy Neesam · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Mexico City</h4><p>Mexico City offers exceptional choice in museums, food, parks, hospitals, public transport and international connections. Its size means neighbourhoods can feel like distinct small cities, so walkability, noise, air quality, elevation and travel times vary widely. It may suit retirees who want a rich urban routine and a broad range of specialist services, but traffic and the scale of the city can be tiring. Visit the specific districts you would consider living in and test ordinary journeys before deciding.</p><a href="https://ccinshae.salud.gob.mx/red-de-institutos-y-hospitales/instituciones/hospital-general-de-mexico-dr-eduardo-liceaga/" target="_blank" rel="noopener noreferrer">Hospital General de México Dr. Eduardo Liceaga (public) ↗</a>
+      <a href="https://en.hospitalangeles.com/hospital/mexico?esp=SS3400&amp;pag=0" target="_blank" rel="noopener noreferrer">Hospital Angeles México (private; Mexico City · direct hospital page) ↗</a></article>
+  </div>
+</section>
+
+<section class="country" id="malaysia">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇲🇾</div>
+    <div>
+      <h2>Malaysia</h2>
+      <p class="country-subtitle">Multicultural cities, excellent food traditions, tropical islands and modern urban infrastructure.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kuala%20Lumpur%20Cityscape.jpg?width=1400" alt="Kuala Lumpur cityscape with the Twin Towers and KL Tower" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_Cityscape.jpg" target="_blank" rel="noopener noreferrer">Kuala Lumpur Cityscape</a> by Saad Abdullah · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Malaysia brings together Malay, Chinese, Indian and Indigenous cultures, with English commonly used in many urban and professional settings. The climate is tropical throughout the year, so heat, humidity and heavy rain are part of everyday planning; local weather patterns differ between the peninsula and East Malaysia. Kuala Lumpur has the widest choice of major hospitals, transport and international connections, while Penang combines heritage and urban services, and smaller places can offer a quieter pace with fewer specialist facilities. Before moving, check the current Malaysia My Second Home or other applicable residency rules through official sources, understand private medical insurance and treatment costs, and consider how comfortable you are with tropical weather and local customs.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household consumption expenditure</span>
+      <strong>RM 66,792/year</strong>
+      <small>Malaysia · HES 2024</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Average monthly equivalent</span>
+      <strong>RM 5,566/month</strong>
+      <small>Annual figure divided by 12</small>
+    </div>
+  </div>
+  <div class="note">DOSM reports mean monthly household consumption expenditure for 2024. This is a national household average, not an individual retirement budget; spending varies by state, household size and lifestyle. <a href="https://www.dosm.gov.my/portal-main/release-content/household-expenditure-survey-report--malaysia--states" target="_blank" rel="noopener noreferrer">Official DOSM source ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="malaysia safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://data.gov.my/data-catalogue/crime_district" target="_blank" rel="noopener noreferrer">Safety & crime information</a><p>Official crime-by-police-district dataset; geography and data year must be checked.</p></li>
+      <li><a href="https://www.mm2h.gov.my/apply/guidelines" target="_blank" rel="noopener noreferrer">Official Malaysia My Second Home (MM2H) programme guidelines</a><p>Check the current category-specific age, fixed-deposit, property-purchase, stay and application-agent requirements before deciding whether the programme fits your circumstances.</p></li>
+    </ul>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 34.0</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading"><h3>Five cities and towns to explore</h3><p>Examples to research, not a ranking.</p></div>
+  <div class="city-grid">
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Penang%20shophouses%2C%20Magazine%20Road%2C%20George%20Town.jpg?width=1200" alt="Colourful heritage shophouses along Magazine Road in George Town, Penang" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Penang_shophouses,_Magazine_Road,_George_Town.jpg" target="_blank" rel="noopener noreferrer">Penang shophouses, Magazine Road, George Town</a> by Vnonymous · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Penang and George Town</h4><p>Penang combines George Town’s UNESCO-listed heritage streets, temples, mosques, historic shophouses and celebrated food culture with modern shopping and medical services. The island has a well-established international community and a mix of dense urban neighbourhoods and quieter coastal areas. Heat and humidity are constant, and traffic can be heavy around popular districts. Compare island and mainland locations, walkability, flood exposure and the distance to your preferred hospital; the most atmospheric heritage streets may not be the easiest for every mobility level.</p><a href="https://jknpenang.moh.gov.my/hpp/" target="_blank" rel="noopener noreferrer">Hospital Pulau Pinang (public) ↗</a>
+      <a href="https://islandhospital.com/contact-us/" target="_blank" rel="noopener noreferrer">Island Hospital, George Town (private · official address and contacts) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Petronas%20twin%20towers.jpg?width=1200" alt="Petronas Twin Towers in Kuala Lumpur" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Petronas_twin_towers.jpg" target="_blank" rel="noopener noreferrer">Petronas twin towers</a> by Honzasoukup · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Kuala Lumpur</h4><p>Malaysia’s capital is the strongest choice for people who want a large city, major private hospitals, international flights, rail transit, shopping and a wide variety of restaurants. Neighbourhoods range from high-rise districts with extensive amenities to older areas with local markets and street life. The tropical heat and frequent downpours can make walking less comfortable, and many daily routines still depend on cars or ride-hailing outside rail corridors. Check the actual walking route to stations, building accessibility, traffic noise and the insurance arrangements required by hospitals.</p><a href="https://hkl.moh.gov.my/en/about-us/department/medical-ii/surgical-directorate/emergency-trauma" target="_blank" rel="noopener noreferrer">Hospital Kuala Lumpur (public · 24-hour emergency) ↗</a>
+      <a href="https://gleneagles.com.my/kuala-lumpur" target="_blank" rel="noopener noreferrer">Gleneagles Hospital Kuala Lumpur (private) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jalan_Yau_Tet_Shin_4.jpg?width=1200" alt="Historic shophouses along Jalan Yau Tet Shin in Ipoh, Perak, Malaysia" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Jalan_Yau_Tet_Shin_4.jpg" target="_blank" rel="noopener noreferrer">Jalan Yau Tet Shin 4</a> by Slleong · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Ipoh</h4><p>Ipoh is a smaller city known for its historic shopfronts, limestone hills, local food and a less intense pace than Kuala Lumpur. It has everyday shopping, rail connections and local medical services, while some highly specialised treatment may mean travelling to a larger centre. The city is hot and humid, and neighbourhoods differ in how easy it is to walk or get around without a car. It may appeal to people who value food and a quieter routine, provided they check hospital access, transport and the services available close to home.</p><a href="https://hrpb.moh.gov.my/v3/perkhidmatan-tph/perkhidmatan-perubatan/jabatan-kecemasan-trauma" target="_blank" rel="noopener noreferrer">Hospital Raja Permaisuri Bainun (public · 24-hour emergency) ↗</a>
+      <a href="https://kpjhealth.com.my/ipoh/" target="_blank" rel="noopener noreferrer">KPJ Ipoh Specialist Hospital (private) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Melaka-Dutch-Square-2164.jpg?width=1200" alt="Dutch Square and Christ Church in Melaka" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Melaka-Dutch-Square-2164.jpg" target="_blank" rel="noopener noreferrer">Melaka-Dutch-Square-2164</a> by Vmenkov · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Melaka</h4><p>Melaka offers a compact historic centre, riverside walks, museums and a strong mix of Malay, Chinese, Indian and Portuguese-influenced heritage. It is smaller and generally calmer than Kuala Lumpur, with a strong visitor economy and access to everyday services. Weekend and holiday traffic can make the centre crowded, while the hottest part of the day can be uncomfortable for long walks. Retirees should compare quieter residential districts with the tourist core, confirm the range of nearby healthcare services and check transport links for trips to larger cities.</p><a href="https://jknmelaka.moh.gov.my/hmelaka/" target="_blank" rel="noopener noreferrer">Hospital Melaka (public) ↗</a>
+      <a href="https://www.mahkotamedical.com/contact-us" target="_blank" rel="noopener noreferrer">Mahkota Specialist Hospital (private · official address and contacts) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kota_Kinabalu_during_the_day-2.jpg?width=1200" alt="Daytime view of the waterfront in Kota Kinabalu, Sabah, Malaysia" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Kota_Kinabalu_during_the_day-2.jpg" target="_blank" rel="noopener noreferrer">Kota Kinabalu during the day-2</a> by Kanzcech · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Kota Kinabalu</h4><p>Kota Kinabalu, on Malaysian Borneo, offers a coastal setting, markets, seafood, island day trips and access to Sabah’s natural landscapes. It has an airport and a regional service centre, but it is more geographically separate from Peninsular Malaysia, which affects onward travel and access to some specialist services. Tropical heat, heavy rain and the distance between neighbourhoods are practical considerations. It may suit people who value nature and a smaller coastal city, as long as they are comfortable with the healthcare and transport options available locally.</p><a href="https://jknsabah.moh.gov.my/hqe1/" target="_blank" rel="noopener noreferrer">Hospital Queen Elizabeth (public) ↗</a>
+      <a href="https://gleneagles.com.my/kota-kinabalu/contact-us" target="_blank" rel="noopener noreferrer">Gleneagles Hospital Kota Kinabalu (private · official contact page) ↗</a></article>
+  </div>
+</section>
+
+
+<section class="country" id="united-states">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇺🇸</div>
+    <div>
+      <h2>United States</h2>
+      <p class="country-subtitle">A large and diverse country where climate, housing, taxes and healthcare access can vary greatly by state and city.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Statue%20of%20liberty%20and%20nyc%20skyline.jpg?width=1400" alt="The Statue of Liberty with the New York City skyline across the harbor" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Statue_of_liberty_and_nyc_skyline.jpg" target="_blank" rel="noopener noreferrer">Statue of liberty and nyc skyline</a> by Gustavo Collins · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>The United States offers many possible retirement lifestyles, from dense cities with public transit to warm coastal communities and dry desert regions. Costs differ substantially between states and neighbourhoods. Healthcare access and out-of-pocket costs depend on eligibility, insurance coverage and the services needed, while state and local taxes can affect retirement income and housing. These five places are examples for further research, not a ranking. Anyone considering a move should compare total annual costs, insurance, climate risks and access to the specific medical care they may need. Some US city cards also link to Department of Veterans Affairs (VA) facilities; these are not general public hospitals, and access depends on VA eligibility. Check the official eligibility rules before relying on them.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average annual expenditures</span>
+      <strong>US$ 78,535/year</strong>
+      <small>United States · BLS 2024</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate monthly equivalent</span>
+      <strong>US$ 6,545/month</strong>
+      <small>Annual figure divided by 12</small>
+    </div>
+  </div>
+  <div class="note">The U.S. Bureau of Labor Statistics reports average annual expenditures per consumer unit, a statistical unit that is not exactly the same as a household in every country. This is not an individual retirement budget. <a href="https://www.bls.gov/news.release/cesan.htm" target="_blank" rel="noopener noreferrer">Official BLS source ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="united-states safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://cde.ucr.cjis.gov/" target="_blank" rel="noopener noreferrer">Safety & local crime information</a><p>FBI Crime Data Explorer; reporting coverage and agency boundaries vary.</p></li>
+      <li><a href="https://travel.state.gov/content/travel/en/us-visas/immigrate.html" target="_blank" rel="noopener noreferrer">Official US immigrant visa categories (Department of State)</a><p>The United States has no general-purpose retirement visa. Permanent immigration requires eligibility through an established category, such as qualifying family, employment or investment routes; check official rules before making plans.</p></li>
+    </ul>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 69.7</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading"><h3>Five cities to explore</h3><p>Examples to research, not a ranking.</p></div>
+  <div class="city-grid">
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pittsburgh%20skyline%20view.jpg?width=1200" alt="Downtown Pittsburgh viewed across the rivers" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Pittsburgh_skyline_view.jpg" target="_blank" rel="noopener noreferrer">Pittsburgh skyline view</a> by Derek Cashman · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Pittsburgh, Pennsylvania</h4>
+      <p>A regional city with major medical and university institutions, established neighbourhoods and riverfront scenery. Research winter weather, steep streets, transport links and neighbourhood-by-neighbourhood housing costs.</p>
+      <a href="https://www.upmc.com/locations/hospitals/presbyterian" target="_blank" rel="noopener noreferrer">UPMC Presbyterian Hospital (private nonprofit) ↗</a>
+      <a href="https://www.va.gov/pittsburgh-health-care/locations/pittsburgh-va-medical-center-university-drive/" target="_blank" rel="noopener noreferrer">Pittsburgh VA Medical Center (federal; eligibility rules apply) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Philadelphia%20skyline.jpg?width=1200" alt="Philadelphia skyline" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:The_Philadelphia_skyline.jpg" target="_blank" rel="noopener noreferrer">The Philadelphia skyline</a> by Mefman00 · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Philadelphia, Pennsylvania</h4>
+      <p>A large city with extensive public transport, cultural institutions and specialist medical services. Compare property costs, local taxes, safety and the practicality of daily trips in the specific neighbourhoods you are considering.</p>
+      <a href="https://www.pennmedicine.org/for-patients-and-visitors/penn-medicine-locations/hospital-of-the-university-of-pennsylvania/new-hospital-pavilion" target="_blank" rel="noopener noreferrer">Hospital of the University of Pennsylvania (academic medical center) ↗</a>
+      <a href="https://www.va.gov/philadelphia-health-care/" target="_blank" rel="noopener noreferrer">Corporal Michael J. Crescenz VA Medical Center (federal; eligibility rules apply) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Downtown%20Asheville.jpg?width=1200" alt="Downtown Asheville, North Carolina" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Downtown_Asheville.jpg" target="_blank" rel="noopener noreferrer">Downtown Asheville</a> by mdl70 · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Asheville, North Carolina</h4>
+      <p>A smaller city near the Blue Ridge Mountains that may appeal to people who value outdoor recreation and a milder mountain setting. Check housing affordability, specialist healthcare access, road conditions and exposure to severe weather or flooding.</p>
+      <a href="https://www.missionhealth.org/locations/mission-hospital" target="_blank" rel="noopener noreferrer">Mission Hospital (Asheville) ↗</a>
+      <a href="https://www.va.gov/asheville-health-care/locations/charles-george-department-of-veterans-affairs-medical-center/" target="_blank" rel="noopener noreferrer">Charles George VA Medical Center (federal; Asheville; eligibility rules apply) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tampa%20Skyline.jpg?width=1200" alt="Tampa, Florida skyline" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Tampa_Skyline.jpg" target="_blank" rel="noopener noreferrer">Tampa Skyline</a> by Sonny SideUp · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Tampa, Florida</h4>
+      <p>A warm-weather metropolitan area with waterfront districts, urban amenities and access to regional healthcare. Compare home and flood insurance, hurricane exposure, summer heat, transport and the cost of medical coverage.</p>
+      <a href="https://www.tgh.org/about-tgh/tgh-fact-sheet" target="_blank" rel="noopener noreferrer">Tampa General Hospital (private nonprofit; official hospital facts and address) ↗</a>
+      <a href="https://www.va.gov/tampa-health-care/locations/james-a-haley-veterans-hospital/" target="_blank" rel="noopener noreferrer">James A. Haley Veterans’ Hospital (federal; Tampa; eligibility rules apply) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://images.unsplash.com/photo-1698273192186-671d21c48a50?auto=format&fit=crop&w=1200&q=80" alt="Downtown Tucson with desert mountains in the distance" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://unsplash.com/photos/a-view-of-a-city-with-mountains-in-the-background-Gf0BpriZJtY" target="_blank" rel="noopener noreferrer">A view of a city with mountains in the background</a> by JC Cervantes · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Tucson, Arizona</h4>
+      <p>A desert city with mountain scenery and a sunny, dry climate for much of the year. Research extreme summer temperatures, air-conditioning costs, water conditions, transport and access to the medical specialists you may need.</p>
+      <a href="https://www.bannerhealth.com/locations/tucson/banner-university-medical-center-tucson" target="_blank" rel="noopener noreferrer">Banner – University Medical Center Tucson ↗</a>
+      <a href="https://www.va.gov/southern-arizona-health-care/locations/tucson-va-medical-center/" target="_blank" rel="noopener noreferrer">Tucson VA Medical Center (federal; eligibility rules apply) ↗</a>
+    </article>
+  </div>
+  <div class="note">Healthcare eligibility, insurance premiums, deductibles and tax treatment depend on individual circumstances. This page is an introduction, not financial, tax, immigration or medical advice.</div>
+</section>
+
+<section class="country" id="united-kingdom">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇬🇧</div>
+    <div>
+      <h2>United Kingdom</h2>
+      <p class="country-subtitle">Historic cities, regional centres and green countryside, with different housing markets and services across England, Scotland and Wales.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/London%20skyline%20view%20from%20the%20Millennium%20Bridge%20looking%20east%20down%20the%20River%20Thames.jpg?width=1400" alt="London skyline and River Thames viewed from the Millennium Bridge" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:London_skyline_view_from_the_Millennium_Bridge_looking_east_down_the_River_Thames.jpg" target="_blank" rel="noopener noreferrer">London skyline view from the Millennium Bridge looking east down the River Thames</a> by Oleg Yunakov · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>The United Kingdom offers a range of retirement settings, from historic cities and regional centres to smaller towns and rural communities. Housing costs, transport, weather and access to services vary by location. The NHS and social-care arrangements differ across England, Scotland, Wales and Northern Ireland, and access can depend on residency and individual circumstances. People moving from abroad should check visa and residency rules as well as healthcare eligibility. These five places are examples for research, not a ranking or a guarantee of suitability.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household expenditure</span>
+      <strong>£ 35,183/year</strong>
+      <small>United Kingdom · FYE 2025</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate monthly equivalent</span>
+      <strong>£ 2,932/month</strong>
+      <small>Based on £676.60 per week × 52 ÷ 12</small>
+    </div>
+  </div>
+  <div class="note">ONS reports average weekly household expenditure for April 2024 to March 2025. This is a national household average; costs vary by region and household composition and should not be treated as an individual retirement budget. <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/expenditure/bulletins/familyspendingintheuk/april2024tomarch2025" target="_blank" rel="noopener noreferrer">Official ONS source ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="united-kingdom safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/yearendingdecember2025" target="_blank" rel="noopener noreferrer">Safety & crime information</a><p>Official crime statistics for England and Wales only; Scotland and Northern Ireland use separate systems.</p></li>
+      <li><a href="https://www.gov.uk/browse/visas-immigration" target="_blank" rel="noopener noreferrer">Official UK visas and immigration guidance</a><p>The UK has no general retirement visa route based on pension income alone. Check the current visa routes and healthcare eligibility that apply to your circumstances.</p></li>
+    </ul>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 68.2</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading"><h3>Five cities to explore</h3><p>Examples to research, not a ranking.</p></div>
+  <div class="city-grid">
+    <article class="city-card">
+      <img class="city-photo" src="https://images.unsplash.com/photo-1682403683987-bae2acb07f39?auto=format&fit=crop&w=1200&q=80" alt="Edinburgh skyline at sunset" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://unsplash.com/photos/a-view-of-a-city-with-a-castle-in-the-background-NtL2zfmU7hw" target="_blank" rel="noopener noreferrer">A view of a city with a castle in the background</a> by Jordan Ryskamp · <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Edinburgh, Scotland</h4>
+      <p>A cultural capital with rail links, museums, universities and a broad range of city services. Compare housing costs, winter weather, steep streets and accessibility in the neighbourhoods you may live in.</p>
+      <a href="https://www.nhslothian.scot/your-health/hospitals/royal-infirmary-of-edinburgh/" target="_blank" rel="noopener noreferrer">Royal Infirmary of Edinburgh (NHS) ↗</a>
+      <a href="https://www.spirehealthcare.com/spire-edinburgh-hospitals-murrayfield-and-shawfair-park/find-us/locations/" target="_blank" rel="noopener noreferrer">Spire Murrayfield Hospital (private · official address and contacts) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20York%20Shambles.jpg?width=1200" alt="Historic Shambles street in York, England" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:The_York_Shambles.jpg" target="_blank" rel="noopener noreferrer">The York Shambles</a> by David Oxtaby · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>York, England</h4>
+      <p>A historic city with cultural attractions, rail connections and everyday services. Consider tourism-related crowding, the cost of housing, access to healthcare and the suitability of older streets for mobility needs.</p>
+      <a href="https://www.yorkhospitals.nhs.uk/coming-into-hospital/getting-here/" target="_blank" rel="noopener noreferrer">York Hospital (NHS · official address and travel information) ↗</a>
+      <a href="https://www.nuffieldhealth.com/hospitals/york/about" target="_blank" rel="noopener noreferrer">Nuffield Health York Hospital (private · hospital details) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Royal%20Crescent%2C%20Bath.jpg?width=1200" alt="The Royal Crescent in Bath, England" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Royal_Crescent,_Bath.jpg" target="_blank" rel="noopener noreferrer">Royal Crescent, Bath</a> by MontanNito · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Bath, England</h4>
+      <p>A compact historic city known for Georgian architecture, cultural life and green spaces. Compare housing costs, hills and steps in older neighbourhoods, tourist-season activity and travel to specialist services.</p>
+      <a href="https://www.ruh.nhs.uk/finding/contact.asp" target="_blank" rel="noopener noreferrer">Royal United Hospital Bath (NHS · official address and contacts) ↗</a>
+      <a href="https://www.circlehealthgroup.co.uk/hospitals/bath-clinic" target="_blank" rel="noopener noreferrer">Bath Clinic (private · Combe Down, Bath) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cardiff%20Bay%2C%20Wales.jpg?width=1200" alt="Cardiff Bay viewed from Penarth, Wales" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Cardiff_Bay,_Wales.jpg" target="_blank" rel="noopener noreferrer">Cardiff Bay, Wales</a> by Nadezna1971 · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Cardiff, Wales</h4>
+      <p>Wales's capital offers a waterfront, cultural venues, rail links and the services of a regional city. Research neighbourhood differences, rainy weather, housing, transport and the healthcare services available locally.</p>
+      <a href="https://cavuhb.nhs.wales/hospitals-and-health-centres/our-hospitals/uhw/" target="_blank" rel="noopener noreferrer">University Hospital of Wales (NHS; Cardiff) ↗</a>
+      <a href="https://www.spirehealthcare.com/spire-cardiff-hospital/find-us/locations/" target="_blank" rel="noopener noreferrer">Spire Cardiff Hospital (private · official address and travel information) ↗</a>
+    </article>
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Norwich%20Skyline.jpg?width=1200" alt="Skyline of Norwich showing the city's two cathedrals" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Norwich_Skyline.jpg" target="_blank" rel="noopener noreferrer">Norwich Skyline</a> by Andrew Hurley · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4>Norwich, England</h4>
+      <p>A regional city with historic streets, markets, cultural venues and access to the Norfolk countryside. Check public transport for daily errands, journey times to other cities, housing costs and access to specialist healthcare.</p>
+      <a href="https://www.nnuh.nhs.uk/patients-visitors/contacting-and-finding-us/" target="_blank" rel="noopener noreferrer">Norfolk and Norwich University Hospital (NHS · official address and contacts) ↗</a>
+      <a href="https://www.spirehealthcare.com/spire-norwich-hospital/find-us/location/" target="_blank" rel="noopener noreferrer">Spire Norwich Hospital (private · Colney, 3 miles from Norwich centre) ↗</a>
+    </article>
+  </div>
+  <div class="note">Healthcare eligibility and residency rules depend on personal circumstances and current government policy. Confirm requirements with official sources before making decisions.</div>
+</section>
+
+<section class="country" id="panama">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇵🇦</div>
+    <div>
+      <h2>Panama</h2>
+      <p class="country-subtitle">A compact Central American country with a global city, Pacific beaches and cooler mountain towns.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panama%20Skyline.jpg?width=1400" alt="Panama City skyline near Cinta Costera" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Panama_Skyline.jpg" target="_blank" rel="noopener noreferrer">Panama Skyline</a> by Nico2panama · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Panama offers strikingly different living environments within a relatively small country: the capital has the broadest range of hospitals and international connections, mountain communities are cooler and greener, and coastal towns offer a relaxed seaside routine. The US dollar is used alongside the balboa at parity, which can simplify some budgeting for people with dollar income, though personal exchange-rate exposure still depends on where income and savings originate. Much of the country is hot and humid, with a distinct rainy season; higher-elevation areas are generally cooler. Research residency and pension-related programmes through official sources, check private insurance and hospital access, and test transport and everyday services in the exact town before committing.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average urban household expenditure</span>
+      <strong>B/. 26,572.56/year</strong>
+      <small>Panama · INEC 2017/18 survey</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate monthly equivalent</span>
+      <strong>B/. 2,214.38/month</strong>
+      <small>Annual figure divided by 12</small>
+    </div>
+  </div>
+  <div class="note">This figure is from INEC's 2017/18 survey and refers to urban households, so it is old and is not a current nationwide estimate. It is included for transparency only and should not be compared directly with newer surveys. B/. (balboa) is at parity with the US dollar. <a href="https://www.inec.gob.pa/Aplicaciones/eigh1718/datos/resultados/Cuadro9.pdf" target="_blank" rel="noopener noreferrer">Official INEC table ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="panama safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://siec.minseg.gob.pa/estadisticas/informe-de-criminalidad-anual/" target="_blank" rel="noopener noreferrer">Safety & crime information</a><p>Official annual crime-report portal; the latest report may be preliminary and may not provide comparable city rates.</p></li>
+      <li><a href="https://www.panamadigital.gob.pa/InformacionTramite/solicitud-de-permiso-de-residente-permanente-como-jubilado-y-pensionado" target="_blank" rel="noopener noreferrer">Official Pensionado permanent-residency procedure</a><p>Government guidance for qualifying pensioners. Confirm the current lifetime-pension, document-authentication and legal-representation requirements with Panama’s National Migration Service before applying.</p></li>
+    </ul>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 46.5</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading"><h3>Five cities and towns to explore</h3><p>Examples to research, not a ranking.</p></div>
+  <div class="city-grid">
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Casco%20Viejo%2C%20Panama%20City%2C%20Panama.jpg?width=1200" alt="Historic Casco Viejo district of Panama City, Panama" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Casco_Viejo,_Panama_City,_Panama.jpg" target="_blank" rel="noopener noreferrer">Casco Viejo, Panama City, Panama</a> by rb-photo · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Panama City</h4><p>The capital combines a modern skyline, historic Casco Antiguo, restaurants, shopping, international flights and the country’s broadest concentration of specialist medical services. Neighbourhoods differ greatly: some are walkable and close to services, while others are car-oriented and separated by busy roads. Heat, humidity, traffic and heavy seasonal rain can affect everyday routines. It may suit retirees who prioritise medical access and international connectivity, but compare building quality, flood risk, noise and travel times to the specific hospital you expect to use.</p><a href="https://www.hospitalnacional.com/contactenos/" target="_blank" rel="noopener noreferrer">Hospital Nacional (private · official contact and address) ↗</a>
+      <a href="https://www.hospitalsantotomas.gob.pa/contacto/" target="_blank" rel="noopener noreferrer">Hospital Santo Tomás (public · official contact and address) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Boquete%20Panama%20%2827211038742%29.jpg?width=1200" alt="Panoramic landscape of Bajo Boquete in Panama’s Chiriquí highlands" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Boquete_Panama_(27211038742).jpg" target="_blank" rel="noopener noreferrer">Boquete Panama (27211038742)</a> by dronepicr · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Boquete</h4><p>Boquete sits in the green highlands of Chiriquí and is known for mountain scenery, coffee farms, gardens, walking routes and a cooler climate than the lowland tropics. Its small-town atmosphere and international community can appeal to people who prefer nature and a slower pace. The trade-off is that the range of specialist healthcare, shopping and services is more limited than in the capital; many residents travel to David for larger facilities. Consider rainy-season conditions, steep roads, transport and how far you are comfortable living from specialist care.</p><a href="https://prensa.css.gob.pa/2025/06/14/inicia-el-traslado-de-pacientes-del-hospital-dr-rafael-hernandez-al-nuevo-centro-hospitalario-de-david/" target="_blank" rel="noopener noreferrer">Regional public hospital: Hospital Dr. Rafael Hernández (David, outside Boquete) ↗</a>
+      <a href="https://hospitalchiriqui.org/contacto" target="_blank" rel="noopener noreferrer">Hospital Chiriquí (private · David, outside Boquete; official contact) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/David-Panama.jpg?width=1200" alt="View of David, Chiriquí, Panama" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:David-Panama.jpg" target="_blank" rel="noopener noreferrer">David-Panama</a> by Moto-gundy · <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>David</h4><p>David is a practical regional city in western Panama, with shopping centres, markets, banks, an airport and a concentration of hospitals and clinics serving Chiriquí. It is less internationally polished than the capital but offers many everyday services without the same metropolitan scale. The lowland climate is hot, and a car or taxi may be useful depending on where you live. David can be a sensible base for people who want access to services while remaining near the highlands and Pacific coast; visit residential areas and check the specific medical facilities available.</p><a href="https://hospitalchiriqui.org/contacto" target="_blank" rel="noopener noreferrer">Hospital Chiriquí (private · official contact) ↗</a>
+      <a href="https://www.css.gob.pa/chiriqui/" target="_blank" rel="noopener noreferrer">Hospital Regional Dr. Rafael Hernández (public; David) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coronado%20Beach%20%284223441009%29.jpg?width=1200" alt="Beach at Coronado on Panama’s Pacific coast" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Coronado_Beach_(4223441009).jpg" target="_blank" rel="noopener noreferrer">Coronado Beach (4223441009)</a> by Sandra Cohen-Rose and Colin Rose · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Coronado</h4><p>Coronado is a Pacific beach community west of Panama City, with residential developments, supermarkets, restaurants, golf and access to nearby coastal towns. It can offer a beach-oriented lifestyle while remaining within driving distance of the capital, but traffic on the main highway can make travel times unpredictable. The climate is hot and humid, with a pronounced rainy season, and private clinics locally do not replace every specialist service available in Panama City. Check transport, healthcare referral arrangements, water and power reliability, and whether the area feels lively enough outside holiday periods.</p><a href="https://minsa.gob.pa/noticia/reinician-actividades-en-areas-afectadas-por-el-sistema-de-climatizacion-del-hospital" target="_blank" rel="noopener noreferrer">Regional public hospital: Hospital Nicolás A. Solano (La Chorrera, outside Coronado) ↗</a></article>
+    <article class="city-card"><img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Bocas%20del%20Toro%20Panama.jpg?width=1200" alt="Aerial view of Bocas del Toro, Panama" loading="lazy" decoding="async"><small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Bocas_del_Toro_Panama.jpg" target="_blank" rel="noopener noreferrer">Bocas del Toro Panama</a> by Dronepicr · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small><h4>Bocas del Toro</h4><p>Bocas del Toro offers Caribbean islands, a relaxed waterfront atmosphere, tropical nature and access to beaches and marine activities. The lifestyle can be appealing to people who want a small island community, but island living brings practical trade-offs: weather can disrupt travel, services are more limited than in larger cities and some errands require boats or longer journeys. Humidity and rainfall are high, and the tourist season can change the pace of the main town. Before considering a permanent move, check year-round housing, utilities, transport reliability and the route to hospitals for routine and emergency care.</p><a href="https://www.minsa.gob.pa/noticia/inicia-funcionamiento-del-nuevo-hospital-guillermo-sanchez-borbon" target="_blank" rel="noopener noreferrer">Hospital Guillermo Sánchez Borbón (public; Isla Colón; official MINSA information) ↗</a>
+      </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Sources and data notes</h2>
+  <ul>
+    <li>Cost of living: Numbeo, Cost of Living Index by Country, 2026 Mid-Year. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">Country index data ↗</a> · <a href="https://www.numbeo.com/cost-of-living/cpi_explained.jsp" target="_blank" rel="noopener noreferrer">Index definitions ↗</a></li>
+    <li>Healthcare: Each city card links to the named hospital or to an official health-service directory where a direct hospital page is not available. Read the location note carefully when the facility is outside the city or is a clinic rather than a hospital.</li>
+    <li>Photographs: Source pages and direct license links are provided beside each image. Some images may be resized or cropped for the 16:9 layout; check each file’s license and attribution requirements before reuse.</li>
+  </ul>
+  <p class="intro">The Cost of Living Index excludes rent and compares everyday consumer prices with New York City set to 100. It is a relative index, not a monthly cost estimate, and does not establish that a destination fits a particular retirement budget. Numbeo data is partly user-contributed and may change over time. Check current local costs and official information before making decisions.</p>
+</section>
+</main>
+
+<footer>
+  <p><strong>RetireAtlas</strong> · Explore your retirement possibilities</p>
+  <p>Photograph source pages and license details are linked beside each image. Images may be resized or cropped to fit the page layout. Please check each source page for the current license and attribution requirements before reuse. Images are served from Wikimedia Commons or Unsplash; availability depends on the source host.</p>
+  <p>Research carefully. Plan confidently.</p>
+  <p><a href="#top">Back to top ↑</a></p>
+
+<p class="site-links"><a href="../privacy-policy/">Privacy Policy</a> · <a href="../about/">About</a> · <a href="../contact/">Contact</a></p>
+</footer>
+
+<script>
+(function(){
+  const rateCache = new Map();
+  const currencyNames = {EUR:"Euro",THB:"Thai baht",GBP:"British pound",USD:"US dollar",MYR:"Malaysian ringgit",MXN:"Mexican peso",PAB:"Panamanian balboa"};
+  function apiCode(code){ return code === "PAB" ? "USD" : code; }
+  async function getRate(from,to){
+    if(from===to) return {rate:1,date:null};
+    const key=from+"_"+to;
+    if(rateCache.has(key)) return rateCache.get(key);
+    const promise=fetch("https://api.frankfurter.dev/v2/rate/"+encodeURIComponent(from)+"/"+encodeURIComponent(to))
+      .then(response=>{if(!response.ok) throw new Error("Exchange-rate service is temporarily unavailable.");return response.json();})
+      .then(data=>({rate:Number(data.rate),date:data.date}));
+    rateCache.set(key,promise);
+    try{return await promise;}catch(error){rateCache.delete(key);throw error;}
+  }
+  document.querySelectorAll(".currency-converter").forEach(function(box){
+    const amount=box.querySelector(".converter-amount");
+    const from=box.querySelector(".converter-from");
+    const to=box.querySelector(".converter-to");
+    const result=box.querySelector(".converter-result");
+    const note=box.querySelector(".converter-rate-note");
+    from.value="EUR"; to.value="USD";
+    let runId=0;
+    function format(value,code){
+      try{return new Intl.NumberFormat(undefined,{style:"currency",currency:code,maximumFractionDigits:2}).format(value);}
+      catch(e){return value.toLocaleString(undefined,{maximumFractionDigits:2})+" "+code;}
+    }
+    async function convert(){
+      const id=++runId, value=Number(amount.value), source=from.value, target=to.value;
+      result.classList.remove("error");
+      if(amount.value.trim()===""||!Number.isFinite(value)||value<0){result.textContent="Enter a valid amount of zero or more.";result.classList.add("error");return;}
+      result.textContent="Getting latest available reference rate…";
+      try{
+        const rateFrom=apiCode(source), rateTo=apiCode(target);
+        const data=await getRate(rateFrom,rateTo);
+        if(id!==runId)return;
+        const converted=value*data.rate;
+        result.textContent=format(value,source)+" = "+format(converted,target);
+        note.textContent=(data.date?"Rate date: "+data.date+". ":"")+"Reference rates only—not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).";
+      }catch(error){
+        if(id!==runId)return;
+        result.textContent="Sorry, the exchange rate could not be loaded. Please check your internet connection and try again.";
+        result.classList.add("error");
+      }
+    }
+    [amount,from,to].forEach(el=>el.addEventListener(el===amount?"input":"change",convert));
+    box.querySelector(".converter-swap").addEventListener("click",function(){
+      const old=from.value;from.value=to.value;to.value=old;convert();
+    });
+    convert();
+  });
+})();
+</script>
+
+</body>
+</html>
