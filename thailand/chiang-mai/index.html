@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore eight retirement destinations across Europe, Asia and the Americas. Compare city lifestyles, climate, healthcare resources and national cost-of-living context.">
+<meta name="theme-color" content="#6d5ce7">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview — Chiang Mai, Thailand | RetireAtlas</title>
+<style>
+:root {
+  --purple:#6d5ce7;
+  --dark:#24213a;
+  --muted:#6b7280;
+  --light:#f7f6ff;
+  --border:#e7e5f2;
+  --white:#ffffff;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--dark);
+  background:#fff;
+  font-size:19px;
+  line-height:1.6;
+}
+a { color:var(--purple); }
+a:focus-visible,button:focus-visible {
+  outline:3px solid #b6adff;
+  outline-offset:3px;
+}
+header {
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+}
+.nav {
+  max-width:1120px;
+  margin:auto;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+.logo {
+  color:var(--dark);
+  font-size:22px;
+  font-weight:800;
+  text-decoration:none;
+  letter-spacing:-.5px;
+}
+.logo span { color:var(--purple); }
+.nav a:last-child {
+  text-decoration:none;
+  font-weight:700;
+}
+.hero {
+  background:linear-gradient(135deg,#f5f2ff,#fff 65%,#f0edff);
+  padding:65px 22px 58px;
+  text-align:center;
+}
+.hero-inner { max-width:800px; margin:auto; }
+.eyebrow {
+  color:var(--purple);
+  text-transform:uppercase;
+  font-weight:800;
+  font-size:12px;
+  letter-spacing:2px;
+}
+h1 {
+  font-size:clamp(34px,6vw,54px);
+  line-height:1.12;
+  letter-spacing:-1.5px;
+  margin:14px 0;
+}
+.hero p {
+  color:var(--muted);
+  font-size:18px;
+  max-width:680px;
+  margin:0 auto 25px;
+}
+.button {
+  display:inline-block;
+  background:var(--purple);
+  color:#fff;
+  border:0;
+  border-radius:10px;
+  padding:13px 21px;
+  text-decoration:none;
+  font-weight:700;
+  cursor:pointer;
+}
+main {
+  max-width:1120px;
+  margin:auto;
+  padding:35px 22px 65px;
+}
+.section { margin:0 0 48px; }
+.section h2 {
+  font-size:clamp(25px,4vw,34px);
+  line-height:1.25;
+  margin:0 0 12px;
+  letter-spacing:-.5px;
+}
+.intro { color:var(--muted); max-width:780px; font-size:19px; line-height:1.6; }
+.country-nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:22px 0 0;
+}
+.country-nav a {
+  padding:9px 16px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  background:white;
+  text-decoration:none;
+  font-weight:700;
+}
+.index-table-wrap {
+  overflow-x:auto;
+  margin:20px 0 12px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  -webkit-overflow-scrolling:touch;
+}
+.index-table {
+  width:100%;
+  min-width:650px;
+  border-collapse:collapse;
+  text-align:left;
+  font-size:15px;
+}
+.index-table th,
+.index-table td {
+  padding:12px 14px;
+  border-bottom:1px solid var(--border);
+}
+.index-table th {
+  background:var(--light);
+  font-size:13px;
+  line-height:1.4;
+}
+.index-table tbody tr:last-child td { border-bottom:0; }
+.index-table td:not(:first-child),
+.index-table th:not(:first-child) { text-align:right; font-variant-numeric:tabular-nums; }
+.index-note { color:var(--muted); font-size:16px; line-height:1.55; }
+.country {
+  padding:30px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  margin-bottom:35px;
+  scroll-margin-top:20px;
+}
+.country-heading {
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:18px;
+}
+.flag {
+  font-size:35px;
+  line-height:1.2;
+}
+.country h2 { margin:0; }
+.country-subtitle { color:var(--muted); margin:4px 0 0; font-size:19px; line-height:1.6; }
+.stats {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin:22px 0;
+}
+.stat {
+  padding:18px;
+  background:var(--light);
+  border-radius:12px;
+}
+.stat-label {
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+}
+.stat strong {
+  display:block;
+  font-size:clamp(20px,3vw,28px);
+  margin:5px 0;
+}
+.stat small { color:var(--muted); }
+.note {
+  padding:15px 17px;
+  border-left:4px solid var(--purple);
+  background:#faf9ff;
+  border-radius:0 10px 10px 0;
+  font-size:16px;
+  line-height:1.6;
+}
+.country-info {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin:22px 0;
+}
+.info-box {
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:18px;
+}
+.info-box h3 { margin:0 0 8px; font-size:18px; }
+.info-box p { margin:0 0 10px; color:var(--muted); font-size:19px; line-height:1.6; }
+.info-box a { font-weight:700; }
+.city-heading { margin:28px 0 14px; }
+.city-heading h3 { margin:0; font-size:22px; }
+.city-heading p { color:var(--muted); margin:4px 0; font-size:18px; line-height:1.6; }
+.city-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.city-quick-links {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.city-quick-links a {
+  display:block;
+  padding:12px 15px;
+  border:1px solid var(--border);
+  border-radius:11px;
+  background:var(--light);
+  color:var(--purple);
+  text-decoration:none;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.35;
+}
+.city-quick-links a:hover { border-color:var(--purple); }
+.city-quick-links span {
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px;
+  font-weight:400;
+}
+.city-card {
+  padding:19px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  background:#fff;
+}
+.city-card h4 { margin:0 0 8px; font-size:19px; color:var(--purple); font-weight:700; }
+.city-photo {
+  display:block;
+  width:100%;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+  border-radius:10px;
+  margin:0 0 14px;
+  background:#f1effb;
+}
+.photo-credit { display:block; font-size:14px; line-height:1.5; color:var(--muted); margin:-8px 0 12px; overflow-wrap:anywhere; }
+.photo-credit a { font-size:14px; font-weight:400; text-decoration:underline; }
+.photo-modification { color:var(--muted); }
+.country-photo {
+  display:block;
+  width:100%;
+  max-height:320px;
+  aspect-ratio:16 / 7;
+  object-fit:cover;
+  border-radius:14px;
+  margin:18px 0 20px;
+  background:#f1effb;
+}
+.country-photo-credit { display:block; text-align:right; font-size:14px; line-height:1.5; color:var(--muted); margin:-14px 0 18px; overflow-wrap:anywhere; }
+.country-photo-credit a { font-size:14px; font-weight:400; }
+.city-card p { margin:0 0 12px; color:#55566a; font-size:19px; line-height:1.6; }
+.city-card a {
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+}
+.city-card a:hover { text-decoration:underline; }
+.links { display:flex; flex-wrap:wrap; gap:12px; }
+footer {
+  border-top:1px solid var(--border);
+  background:var(--light);
+  padding:30px 22px;
+  text-align:center;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+}
+footer a { font-weight:700; }
+@media(max-width:650px) {
+  .city-quick-links { grid-template-columns:1fr; }
+  .hero { padding:48px 19px; }
+  main { padding:28px 16px 45px; }
+  .country { padding:19px; }
+  .stats,.country-info,.city-grid { grid-template-columns:1fr; }
+  .nav { padding:15px 17px; }
+  .logo { font-size:20px; }
+}
+
+.currency-converter{margin:1rem 0 1.5rem;padding:1rem;border:1px solid #e5e1fb;border-radius:14px;background:#faf9ff}
+.currency-converter h3{margin:0 0 .35rem;color:var(--dark);font-size:1.05rem}
+.converter-intro,.converter-rate-note{font-size:.88rem;color:var(--muted);margin:.35rem 0 .75rem}
+.converter-controls{display:grid;grid-template-columns:minmax(100px,1.2fr) minmax(130px,1fr) auto minmax(130px,1fr);gap:.65rem;align-items:end}
+.converter-controls label{display:flex;flex-direction:column;gap:.3rem;font-size:.88rem;font-weight:600;color:var(--dark)}
+.converter-controls input,.converter-controls select{width:100%;min-width:0;box-sizing:border-box;padding:.65rem;border:1px solid #d7d2ec;border-radius:8px;background:#fff;color:#24213a;font:inherit}
+.converter-swap{padding:.62rem .75rem;border:0;border-radius:8px;background:var(--purple);color:#fff;font-size:1.1rem;cursor:pointer}
+.converter-result{font-weight:700;color:var(--dark);margin:.8rem 0 .3rem;overflow-wrap:anywhere}
+.converter-result.error{font-weight:500;color:#9b1c1c}
+@media(max-width:560px){.converter-controls{grid-template-columns:1fr 1fr}.converter-swap{grid-column:1/-1;grid-row:2;justify-self:center}.converter-controls label:nth-of-type(3){grid-column:1/-1}}
+
+
+.research-links{margin:1rem 0 1.5rem;padding:1rem 1.1rem;border:1px solid #e5e1fb;border-radius:14px;background:#fff}
+.research-links h3{margin:0 0 .6rem;color:var(--dark);font-size:1.02rem}
+.research-links ul{margin:0;padding-left:1.2rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem 1.5rem}
+.research-links li{padding-left:.1rem}
+.research-links a{font-weight:700;color:var(--purple);text-underline-offset:3px}
+.research-links p{margin:.3rem 0 0;color:var(--muted);font-size:.88rem;line-height:1.5}
+@media(max-width:560px){.research-links ul{grid-template-columns:1fr}}
+</style>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"80b34a467198469e92e3636312d38b9f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<div style="padding:12px 16px;background:#fff4d6;border-bottom:1px solid #f0d78a;color:#624b00;text-align:center;font:600 14px/1.5 Arial,Helvetica,sans-serif">TEST PREVIEW — Review copy, not the live RetireAtlas website.</div>
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="#top">Retire<span>Atlas</span></a>
+    <a href="../where-can-i-retire-preview/">All countries</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">Your retirement journey starts here</div>
+    <h1>Explore Retirement in Thailand</h1>
+    <p>Explore five example cities in Thailand, compare local settings and climate, and find linked public and private hospital resources to guide your research.</p>
+    <a class="button" href="../where-can-i-retire-preview/">← Back to all countries</a>
+  </div>
+</section>
+
+<main>
+<section class="section" id="destinations"><h2>Chiang Mai, Thailand</h2><p class="intro">This page contains city descriptions and hospital links for Chiang Mai, Bangkok, Hua Hin, Phuket and Pattaya. These are examples to research, not a ranking.</p><p><a href="../where-can-i-retire-preview/">← Back to Where Can I Retire?</a></p></section>
+
+<section class="country" id="thailand">
+  <div class="country-heading">
+    <div class="flag" aria-hidden="true">🇹🇭</div>
+    <div>
+      <h2>Thailand</h2>
+      <p class="country-subtitle">A varied tropical country with lively cities, northern mountains and long coastlines.</p>
+    </div>
+  </div>
+  <img class="country-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ko%20Tapu%20(James%20Bond)%20Island%20in%20Phang%20Nga%20Bay%2C%20Thailand.jpg?width=1400" alt="Ko Tapu, the iconic limestone island in the turquoise waters of Phang Nga Bay, Thailand" loading="lazy" decoding="async">
+  <small class="country-photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Ko_Tapu_(James_Bond)_Island_in_Phang_Nga_Bay,_Thailand.jpg" target="_blank" rel="noopener">Ko Tapu (James Bond) Island in Phang Nga Bay, Thailand</a> by Vyacheslav Argenberg · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+  <p>Thailand offers a broad range of lifestyles, from the scale and specialist services of Bangkok to northern cultural centres, quieter seaside towns and island communities. Heat and humidity are common, but rainfall, seasonal air quality and local conditions differ by region. Everyday life may feel convenient and sociable in established urban areas, while island or rural living can mean longer journeys for specialist services. Before choosing a location, research long-stay visa requirements, health insurance, hospital access, air quality, transport and how comfortable you feel navigating daily life across language and cultural differences.</p>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-label">Average household expenditure</span>
+      <strong>฿22,420/month</strong>
+      <small>Thailand · NSO 2025 figure</small>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Approximate annual equivalent</span>
+      <strong>฿269,040/year</strong>
+      <small>Monthly figure multiplied by 12</small>
+    </div>
+  </div>
+  <div class="note">This is average household expenditure, not an individual retirement budget. Costs vary by region, housing, household size and lifestyle. Source: <a href="https://www.nso.go.th/nsoweb/downloadFile/survey/fZl/20260505141117_55523.pdf" target="_blank" rel="noopener noreferrer">Thailand National Statistical Office, 2025 Household Socio-Economic Survey ↗</a></div>
+
+  <section class="currency-converter" aria-label="Currency converter">
+    <h3>💱 Currency converter</h3>
+    <p class="converter-intro">Convert an amount to another currency using the latest available reference exchange rate.</p>
+    <div class="converter-controls">
+      <label>Amount
+        <input class="converter-amount" type="number" min="0" step="any" value="100" inputmode="decimal" aria-label="Amount to convert">
+      </label>
+      <label>From
+        <select class="converter-from" aria-label="Source currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+      <button class="converter-swap" type="button" aria-label="Swap currencies">⇄</button>
+      <label>To
+        <select class="converter-to" aria-label="Target currency">
+        <option value="EUR">Euro (€)</option>
+        <option value="THB">Thai baht (฿)</option>
+        <option value="GBP">British pound (£)</option>
+        <option value="USD">US dollar ($)</option>
+        <option value="MYR">Malaysian ringgit (RM)</option>
+        <option value="MXN">Mexican peso (MXN)</option>
+        <option value="PAB">Panamanian balboa (B/.)</option>
+        </select>
+      </label>
+    </div>
+    <p class="converter-result" aria-live="polite">Choose currencies to convert.</p>
+    <p class="converter-rate-note">Rates are reference rates, not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).</p>
+  </section>
+  <div class="research-links" aria-label="thailand safety and residency resources">
+    <h3>Further research</h3>
+    <ul>
+      <li><a href="https://www.oja.go.th/justicedata/" target="_blank" rel="noopener noreferrer">Safety & crime information</a><p>Thai justice and crime statistics; indicators and reporting periods may differ.</p></li>
+      <li><a href="https://www.thaievisa.go.th/" target="_blank" rel="noopener noreferrer">Official Thai e-Visa portal (Ministry of Foreign Affairs)</a><p>Select the relevant retirement category and confirm current eligibility and documents with the responsible Thai embassy or consulate before applying.</p></li>
+    </ul>
+  </div>
+  <div class="country-info">
+    <div class="info-box">
+      <h3>🌦️ Climate</h3>
+      <p>Hot weather occurs throughout much of the year. Rainfall and seasonal air quality differ by region; northern cities can experience seasonal haze.</p>
+      <a href="https://www.tmd.go.th/en" target="_blank" rel="noopener">Thai Meteorological Department ↗</a>
+    </div>
+    <div class="info-box">
+      <h3>🏥 Healthcare</h3>
+      <p>Compare public and private facilities, insurance requirements, treatment costs and language support.</p>
+      <div class="links">
+        <a href="https://www.moph.go.th/" target="_blank" rel="noopener">Ministry of Public Health ↗</a>
+        <a href="https://www.hss.moph.go.th/" target="_blank" rel="noopener">Health Service Support ↗</a>
+      </div>
+    </div>
+  </div>
+  <p class="country-cost-note"><strong>Cost of Living Index (Numbeo, 2026 Mid-Year): 36.8</strong> — excludes rent and is relative to New York City (100). It compares everyday consumer prices, not a monthly retirement budget. <a href="https://pt.numbeo.com/custo-de-vida/classifica%C3%A7%C3%B5es-por-pa%C3%ADs?title=2026-mid" target="_blank" rel="noopener noreferrer">View source and methodology ↗</a></p>
+  <div class="city-heading"><h3>Chiang Mai</h3><p>City overview, local setting and healthcare links.</p></div><div class="city-grid"><article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Doi%20Suthep%20Temple%20Chiang%20Mai%20Thailand.jpg?width=1200" alt="Golden chedi of Wat Phra That Doi Suthep temple surrounded by green mountain forest in Chiang Mai" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Doi_Suthep_Temple_Chiang_Mai_Thailand.jpg" target="_blank" rel="noopener noreferrer">Doi Suthep Temple Chiang Mai Thailand</a> by Philip Nalangan · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4 id="chiang-mai">Chiang Mai</h4>
+      <p>Chiang Mai blends a historic old city, temples, markets, cafés, universities and access to northern Thailand’s mountains and countryside. It offers a slower rhythm than Bangkok while retaining private hospitals, shopping and an established international community. The key trade-off is seasonal air pollution, which can become severe during parts of the dry season, alongside hot weather and periods of heavy rain. Anyone with respiratory concerns should review seasonal air-quality data and consider a plan for spending the worst periods elsewhere.</p>
+      <a href="https://w2.med.cmu.ac.th/opd/er-eng/" target="_blank" rel="noopener noreferrer">Maharaj Nakorn Chiang Mai Hospital (public) ↗</a>
+      <a href="https://www.bangkokhospital.com/en/chiangmai/contact/head-office" target="_blank" rel="noopener noreferrer">Bangkok Hospital Chiang Mai (private) ↗</a>
+    </article></div>
+</section>
+
+<footer>
+  <p><strong>RetireAtlas</strong> · Explore your retirement possibilities</p>
+  <p>Photograph source pages and license details are linked beside each image. Images may be resized or cropped to fit the page layout. Please check each source page for the current license and attribution requirements before reuse. Images are served from Wikimedia Commons or Unsplash; availability depends on the source host.</p>
+  <p>Research carefully. Plan confidently.</p>
+  <p><a href="#top">Back to top ↑</a></p>
+
+<p class="site-links"><a href="../privacy-policy/">Privacy Policy</a> · <a href="../about/">About</a> · <a href="../contact/">Contact</a></p>
+</footer>
+
+<script>
+(function(){
+  const rateCache = new Map();
+  const currencyNames = {EUR:"Euro",THB:"Thai baht",GBP:"British pound",USD:"US dollar",MYR:"Malaysian ringgit",MXN:"Mexican peso",PAB:"Panamanian balboa"};
+  function apiCode(code){ return code === "PAB" ? "USD" : code; }
+  async function getRate(from,to){
+    if(from===to) return {rate:1,date:null};
+    const key=from+"_"+to;
+    if(rateCache.has(key)) return rateCache.get(key);
+    const promise=fetch("https://api.frankfurter.dev/v2/rate/"+encodeURIComponent(from)+"/"+encodeURIComponent(to))
+      .then(response=>{if(!response.ok) throw new Error("Exchange-rate service is temporarily unavailable.");return response.json();})
+      .then(data=>({rate:Number(data.rate),date:data.date}));
+    rateCache.set(key,promise);
+    try{return await promise;}catch(error){rateCache.delete(key);throw error;}
+  }
+  document.querySelectorAll(".currency-converter").forEach(function(box){
+    const amount=box.querySelector(".converter-amount");
+    const from=box.querySelector(".converter-from");
+    const to=box.querySelector(".converter-to");
+    const result=box.querySelector(".converter-result");
+    const note=box.querySelector(".converter-rate-note");
+    from.value="EUR"; to.value="USD";
+    let runId=0;
+    function format(value,code){
+      try{return new Intl.NumberFormat(undefined,{style:"currency",currency:code,maximumFractionDigits:2}).format(value);}
+      catch(e){return value.toLocaleString(undefined,{maximumFractionDigits:2})+" "+code;}
+    }
+    async function convert(){
+      const id=++runId, value=Number(amount.value), source=from.value, target=to.value;
+      result.classList.remove("error");
+      if(amount.value.trim()===""||!Number.isFinite(value)||value<0){result.textContent="Enter a valid amount of zero or more.";result.classList.add("error");return;}
+      result.textContent="Getting latest available reference rate…";
+      try{
+        const rateFrom=apiCode(source), rateTo=apiCode(target);
+        const data=await getRate(rateFrom,rateTo);
+        if(id!==runId)return;
+        const converted=value*data.rate;
+        result.textContent=format(value,source)+" = "+format(converted,target);
+        note.textContent=(data.date?"Rate date: "+data.date+". ":"")+"Reference rates only—not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).";
+      }catch(error){
+        if(id!==runId)return;
+        result.textContent="Sorry, the exchange rate could not be loaded. Please check your internet connection and try again.";
+        result.classList.add("error");
+      }
+    }
+    [amount,from,to].forEach(el=>el.addEventListener(el===amount?"input":"change",convert));
+    box.querySelector(".converter-swap").addEventListener("click",function(){
+      const old=from.value;from.value=to.value;to.value=old;convert();
+    });
+    convert();
+  });
+})();
+</script>
+
+</body>
+</html>
