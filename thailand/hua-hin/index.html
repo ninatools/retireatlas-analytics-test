@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Explore eight retirement destinations across Europe, Asia and the Americas. Compare city lifestyles, climate, healthcare resources and national cost-of-living context.">
 <meta name="theme-color" content="#6d5ce7">
-<meta name="robots" content="noindex, nofollow">
 <title>Preview — Hua Hin, Thailand | RetireAtlas</title>
 <style>
 :root {
@@ -232,7 +231,7 @@ main {
   border:1px solid var(--border);
   border-radius:11px;
   background:var(--light);
-  color:var(--purple);
+  color:var(--dark);
   text-decoration:none;
   font-size:17px;
   font-weight:700;
@@ -252,7 +251,7 @@ main {
   border-radius:13px;
   background:#fff;
 }
-.city-card h4 { margin:0 0 8px; font-size:19px; color:var(--purple); font-weight:700; }
+.city-card h4 { margin:0 0 8px; font-size:19px; }
 .city-photo {
   display:block;
   width:100%;
@@ -330,11 +329,10 @@ footer a { font-weight:700; }
 <!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-<div style="padding:12px 16px;background:#fff4d6;border-bottom:1px solid #f0d78a;color:#624b00;text-align:center;font:600 14px/1.5 Arial,Helvetica,sans-serif">TEST PREVIEW — Review copy, not the live RetireAtlas website.</div>
 <header>
   <nav class="nav" aria-label="Main navigation">
     <a class="logo" href="#top">Retire<span>Atlas</span></a>
-    <a href="../where-can-i-retire-preview/">All countries</a>
+    <a href="../where-can-i-retire/">All countries</a>
   </nav>
 </header>
 
@@ -348,7 +346,84 @@ footer a { font-weight:700; }
 </section>
 
 <main>
+<section class="section city-detail" id="city-detail">
+  <div class="city-heading"><h2>Hua Hin</h2><p>City overview, local setting and healthcare links.</p></div>
+  <div class="city-grid">
+    <article class="city-card">
+      <img class="city-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/01%20Hua%20Hin%20Beach.jpg?width=900" alt="Hua Hin beach in Thailand" loading="lazy" decoding="async">
+      <small class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:01_Hua_Hin_Beach.jpg" target="_blank" rel="noopener noreferrer">01 Hua Hin Beach</a> by Elmschrat · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a> <span class="photo-modification">· Image resized/cropped for layout</span></small>
+      <h4 id="hua-hin">Hua Hin</h4>
+      <p>Hua Hin is a coastal town with a long-established domestic holiday scene, seafood markets, golf courses and residential areas that range from the busy centre to quieter outskirts. It offers beach access without the scale of Bangkok, although a car or taxi may be useful for errands outside central areas. Heat and humidity are persistent, and the sea is not equally suitable for swimming at all times of year. Check the location of hospitals, the quality of local transport and how easily you can reach Bangkok for complex specialist care.</p>
+      <a href="https://huahinhospital.moph.go.th/" target="_blank" rel="noopener noreferrer">Hua Hin Hospital (public; official homepage with address and phone) ↗</a>
+      <a href="https://www.bangkokhospital.com/en/huahin/about-us/our-story-bhn" target="_blank" rel="noopener noreferrer">Bangkok Hospital Hua Hin (private) ↗</a>
+    </article>
+  </div>
+  <p><a href="../">← Back to Thailand</a></p>
+</section>
+</main>
 
+<footer>
+  <p><strong>RetireAtlas</strong> · Explore your retirement possibilities</p>
+  <p>Photograph source pages and license details are linked beside each image. Images may be resized or cropped to fit the page layout. Please check each source page for the current license and attribution requirements before reuse. Images are served from Wikimedia Commons or Unsplash; availability depends on the source host.</p>
+  <p>Research carefully. Plan confidently.</p>
+  <p><a href="#top">Back to top ↑</a></p>
 
-<main>
-<section class="section" id="destinations"><h2>Hua Hin</h2><p class="intro">City-specific information and healthcare links for Hua Hin, Thailand.</p><p><a href="../">← Back to Thailand</a></p></section>
+<p class="site-links"><a href="../privacy-policy/">Privacy Policy</a> · <a href="../about/">About</a> · <a href="../contact/">Contact</a></p>
+</footer>
+
+<script>
+(function(){
+  const rateCache = new Map();
+  const currencyNames = {EUR:"Euro",THB:"Thai baht",GBP:"British pound",USD:"US dollar",MYR:"Malaysian ringgit",MXN:"Mexican peso",PAB:"Panamanian balboa"};
+  function apiCode(code){ return code === "PAB" ? "USD" : code; }
+  async function getRate(from,to){
+    if(from===to) return {rate:1,date:null};
+    const key=from+"_"+to;
+    if(rateCache.has(key)) return rateCache.get(key);
+    const promise=fetch("https://api.frankfurter.dev/v2/rate/"+encodeURIComponent(from)+"/"+encodeURIComponent(to))
+      .then(response=>{if(!response.ok) throw new Error("Exchange-rate service is temporarily unavailable.");return response.json();})
+      .then(data=>({rate:Number(data.rate),date:data.date}));
+    rateCache.set(key,promise);
+    try{return await promise;}catch(error){rateCache.delete(key);throw error;}
+  }
+  document.querySelectorAll(".currency-converter").forEach(function(box){
+    const amount=box.querySelector(".converter-amount");
+    const from=box.querySelector(".converter-from");
+    const to=box.querySelector(".converter-to");
+    const result=box.querySelector(".converter-result");
+    const note=box.querySelector(".converter-rate-note");
+    from.value="EUR"; to.value="USD";
+    let runId=0;
+    function format(value,code){
+      try{return new Intl.NumberFormat(undefined,{style:"currency",currency:code,maximumFractionDigits:2}).format(value);}
+      catch(e){return value.toLocaleString(undefined,{maximumFractionDigits:2})+" "+code;}
+    }
+    async function convert(){
+      const id=++runId, value=Number(amount.value), source=from.value, target=to.value;
+      result.classList.remove("error");
+      if(amount.value.trim()===""||!Number.isFinite(value)||value<0){result.textContent="Enter a valid amount of zero or more.";result.classList.add("error");return;}
+      result.textContent="Getting latest available reference rate…";
+      try{
+        const rateFrom=apiCode(source), rateTo=apiCode(target);
+        const data=await getRate(rateFrom,rateTo);
+        if(id!==runId)return;
+        const converted=value*data.rate;
+        result.textContent=format(value,source)+" = "+format(converted,target);
+        note.textContent=(data.date?"Rate date: "+data.date+". ":"")+"Reference rates only—not cash-exchange or bank card rates. Panama's balboa is treated as equal to the US dollar (1 PAB = 1 USD).";
+      }catch(error){
+        if(id!==runId)return;
+        result.textContent="Sorry, the exchange rate could not be loaded. Please check your internet connection and try again.";
+        result.classList.add("error");
+      }
+    }
+    [amount,from,to].forEach(el=>el.addEventListener(el===amount?"input":"change",convert));
+    box.querySelector(".converter-swap").addEventListener("click",function(){
+      const old=from.value;from.value=to.value;to.value=old;convert();
+    });
+    convert();
+  });
+})();
+</script>
+
+</body>
+</html>
