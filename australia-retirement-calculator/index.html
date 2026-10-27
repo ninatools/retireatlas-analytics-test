@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Estimate Australian retirement savings in today's dollars and explore a simplified Age Pension estimate. Free educational calculator.">
+<meta name="theme-color" content="#142b49">
+<title>Australia Retirement Calculator | RetireAtlas</title>
+<style>
+:root{--navy:#142b49;--teal:#087f72;--blue:#2563eb;--ink:#17243a;--muted:#637188;--line:#dce5ef;--bg:#f5f7fb;--white:#fff;--warning:#fff7e6;--warning-ink:#805500;--danger:#b42318;--radius:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:15px 20px}.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;color:#fff;text-decoration:none}.brand span{color:#7dd3c7}.nav-note{font-size:.88rem;color:#dbe7f4}
+main{max-width:1180px;margin:26px auto;padding:0 16px 40px}.hero{margin-bottom:22px}.eyebrow{color:var(--teal);font-weight:750;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin:6px 0 10px;letter-spacing:-.04em;color:var(--navy)}.hero p{color:var(--muted);max-width:820px;margin:0}
+.layout{display:grid;grid-template-columns:minmax(280px,390px) minmax(0,1fr);gap:20px;align-items:start}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 4px 18px rgba(20,43,73,.035);margin-bottom:16px}h2{font-size:1.12rem;color:var(--navy);margin:0 0 14px}h3{font-size:1rem;color:var(--navy);margin:0 0 10px}.section{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}.field{margin:0 0 12px}.field label{display:block;font-size:1rem;font-weight:650;margin-bottom:5px}.field input,.field select{width:100%;min-height:43px;border:1px solid #cbd6e4;border-radius:9px;padding:9px 11px;background:#fff;color:var(--ink);font:inherit}.field small,.hint{color:var(--muted);font-size:.9rem}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{border:0;border-radius:10px;padding:12px 16px;font:inherit;font-weight:750;cursor:pointer;background:var(--teal);color:white;width:100%}.btn:hover{filter:brightness(.95)}.btn.secondary{background:#eaf0f7;color:var(--navy);margin-top:8px}.results-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.metric{border:1px solid var(--line);border-radius:12px;padding:15px;background:#fff;min-width:0}.metric .label{font-size:.82rem;color:var(--muted)}.metric .value{font-size:clamp(1.15rem,2.7vw,1.65rem);font-weight:800;color:var(--navy);letter-spacing:-.025em;overflow-wrap:anywhere;margin-top:4px}.metric .sub{font-size:.78rem;color:var(--muted);margin-top:3px}.pill{display:inline-block;border-radius:99px;padding:3px 9px;background:#e8f5f1;color:#075e53;font-size:.78rem;font-weight:750}.warning{background:var(--warning);color:var(--warning-ink);border:1px solid #f0d69a;padding:12px 14px;border-radius:10px;font-size:.87rem;margin:12px 0}.note{font-size:.86rem;color:var(--muted)}.bar{height:12px;background:#e7edf5;border-radius:99px;overflow:hidden;margin:12px 0}.bar span{display:block;height:100%;width:0;background:var(--teal);transition:width .2s}.result-line{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem}.result-line:last-child{border-bottom:0}.result-line strong{text-align:right}.chart{width:100%;height:auto;display:block}.faq details{padding:12px 0;border-bottom:1px solid var(--line)}.faq summary{font-weight:700;cursor:pointer;color:var(--navy)}footer{max-width:1180px;margin:auto;padding:0 16px 30px;color:var(--muted);font-size:.8rem}a{color:#1d5bbf}#pensionStatus{font-weight:750}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.results-grid{grid-template-columns:repeat(2,minmax(0,1fr))}main{margin-top:18px}.card{padding:17px}}
+@media(max-width:420px){.two,.results-grid{grid-template-columns:1fr}.nav-note{font-size:.76rem}}
+</style>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"80b34a467198469e92e3636312d38b9f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="../" aria-label="RetireAtlas home">Retire<span>Atlas</span></a><div class="nav-note">Australia retirement planning</div></div></header>
+<main>
+<section class="hero">
+<div class="eyebrow">Free retirement planning tool</div>
+<h1>Australia Retirement Calculator</h1>
+<p>Explore how your super, savings, retirement spending and inflation could affect your future. See projections in <strong>today's Australian dollars</strong> and a separate, simplified Age Pension estimate.</p>
+</section>
+<div class="warning"><strong>Planning estimate only.</strong> This tool is not financial, tax or Centrelink advice. The Age Pension section covers standard cases and does not determine eligibility. Confirm your circumstances and current rules with Services Australia and a licensed professional before making decisions.</div>
+<div class="layout">
+<section>
+<form id="calcForm" class="card">
+<h2>Your retirement plan</h2>
+<div class="section">
+<h3>Age and timing</h3>
+<div class="two">
+<div class="field"><label for="age">Your age now</label><input id="age" type="number" min="18" max="100" value="40" required></div>
+<div class="field"><label for="retireAge">Retirement age</label><input id="retireAge" type="number" min="19" max="100" value="67" required></div>
+</div>
+<div class="field"><label for="lifeAge">Plan through age</label><input id="lifeAge" type="number" min="60" max="110" value="92" required><small>Used to estimate how long your savings may need to last.</small></div>
+</div>
+<div class="section">
+<h3>Starting balances</h3>
+<div class="field"><label for="super">Current super balance (AUD)</label><input id="super" type="number" min="0" step="1000" value="120000" required></div>
+<div class="field"><label for="savings">Other investable savings (AUD)</label><input id="savings" type="number" min="0" step="1000" value="30000" required></div>
+</div>
+<div class="section">
+<h3>Annual contributions before retirement</h3>
+<div class="field"><label for="salary">Annual salary before tax (AUD)</label><input id="salary" type="number" min="0" step="1000" value="85000" required><small>Assumed to be eligible ordinary-time earnings, excluding employer super. Used only to estimate employer Super Guarantee contributions.</small></div>
+<div class="two">
+<div class="field"><label for="sg">Employer super rate (%)</label><input id="sg" type="number" min="0" max="25" step="0.1" value="12" required></div>
+<div class="field"><label for="extra">Extra savings per year (AUD)</label><input id="extra" type="number" min="0" step="500" value="5000" required></div>
+</div>
+<p class="hint">The model assumes employer contributions are reduced by a 15% contributions-tax allowance, with salary and annual contributions held constant in nominal dollars. It does not model the maximum super contribution base, concessional contribution caps, Division 293 tax, salary growth or eligibility exceptions.</p>
+<p class="hint"><strong>Important modelling assumptions:</strong> This calculator is an educational estimate, not a forecast. It applies a 15% allowance for tax on employer super contributions but does not model investment fees, tax on investment earnings within super, or tax that may apply to withdrawals. Actual retirement balances may be lower or higher than projected. Check your super fund's fees and tax arrangements before relying on the estimate.</p>
+</div>
+<div class="section">
+<h3>Assumptions</h3>
+<div class="two">
+<div class="field"><label for="returnRate">Annual investment return (%)</label><input id="returnRate" type="number" min="-10" max="20" step="0.1" value="6" required></div>
+<div class="field"><label for="inflation">Annual inflation (%)</label><input id="inflation" type="number" min="0" max="15" step="0.1" value="2.5" required></div>
+</div>
+<div class="field"><label for="expenses">Target annual spending in today's dollars (AUD)</label><input id="expenses" type="number" min="0" step="1000" value="55000" required></div>
+<p class="hint">Returns and inflation are user-selected assumptions, not forecasts. The model treats contributions as year-end deposits and spending as a constant real amount.</p>
+</div>
+<button class="btn" type="submit">Calculate my retirement estimate</button>
+<button class="btn secondary" type="reset">Reset example values</button>
+</form>
+
+<form id="pensionForm" class="card">
+<h2>Age Pension estimate</h2>
+<p class="note">For a standard in-Australia case, using rates and thresholds effective 20 September 2026. Couple calculations assume both partners qualify for the standard pension rate.</p>
+<div class="field"><label for="household">Household status</label><select id="household"><option value="single">Single</option><option value="couple">Couple living together (both eligible)</option></select></div>
+<div class="field"><label for="homeowner">Do you own your principal home?</label><select id="homeowner"><option value="yes">Yes — homeowner</option><option value="no">No — non-homeowner</option></select></div>
+<div class="field"><label for="pensionAge">Your age</label><input id="pensionAge" type="number" min="18" max="110" value="67" required></div>
+<div class="field"><label for="assets">Total assessable assets for household (AUD)</label><input id="assets" type="number" min="0" step="1" value="450000" required><small>Enter combined assets for a couple. Exclude the principal home if it is exempt; include other assessable assets.</small></div>
+<div class="field"><label for="financialAssets">Financial assets subject to deeming (AUD)</label><input id="financialAssets" type="number" min="0" step="1" value="180000" required><small>Must be part of the total assets above, not an additional amount.</small></div>
+<div class="field"><label for="otherIncome">Other assessable household income, per fortnight (AUD)</label><input id="otherIncome" type="number" min="0" step="10" value="0" required><small>Exclude deemed income from the financial assets entered above. For a couple, enter combined income.</small></div>
+<button class="btn" type="submit">Estimate Age Pension</button>
+<div class="warning">This simplified estimator does not model residency, overseas payment rules, Work Bonus, rent assistance, transitional rates, compensation payments, permanent blindness or every superannuation exception. It should not be used to decide whether to apply.</div>
+</form>
+</section>
+
+<section>
+<div class="card" aria-live="polite">
+<h2>Your retirement projection</h2>
+<div class="results-grid">
+<div class="metric"><div class="label">Projected balance at retirement</div><div class="value" id="nominalBalance">—</div><div class="sub">Future AUD, before retirement withdrawals</div></div>
+<div class="metric"><div class="label">In today's dollars</div><div class="value" id="realBalance">—</div><div class="sub">Purchasing power after inflation</div></div>
+<div class="metric"><div class="label">Annual target spending</div><div class="value" id="spendingValue">—</div><div class="sub">In today's dollars</div></div>
+<div class="metric"><div class="label">Estimated real annual return</div><div class="value" id="realReturn">—</div><div class="sub">After assumed inflation</div></div>
+</div>
+<h3 style="margin-top:22px">How much of your target is funded?</h3>
+<div class="bar" role="progressbar" aria-label="Retirement target funding" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="fundingBar"><span id="fundingFill"></span></div>
+<div class="result-line"><span>Approximate capital needed at retirement</span><strong id="capitalNeeded">—</strong></div>
+<div class="result-line"><span>Projected surplus / shortfall</span><strong id="gap">—</strong></div>
+<p class="note" id="projectionNote"></p>
+<canvas id="projectionChart" class="chart" width="720" height="260" role="img" aria-label="Illustrative retirement savings projection chart"></canvas>
+</div>
+<div class="card" aria-live="polite">
+<h2>Age Pension result</h2>
+<div class="results-grid">
+<div class="metric"><div class="label">Estimated household rate</div><div class="value" id="pensionFortnight">—</div><div class="sub">Per fortnight before tax; standard rules only</div></div>
+<div class="metric"><div class="label">Annualised estimate</div><div class="value" id="pensionAnnual">—</div><div class="sub">Fortnightly estimate × 26</div></div>
+</div>
+<div class="result-line"><span>Deemed financial income</span><strong id="deemedIncome">—</strong></div>
+<div class="result-line"><span>Income-test estimate</span><strong id="incomeTest">—</strong></div>
+<div class="result-line"><span>Assets-test estimate</span><strong id="assetsTest">—</strong></div>
+<p id="pensionStatus" class="note"></p>
+<p class="note">Age Pension is shown separately and is not automatically added to the retirement savings projection. Actual rates depend on full Centrelink assessment and personal circumstances.</p>
+</div>
+<div class="card faq">
+<h2>How to interpret your results</h2>
+<details><summary>What does “today's dollars” mean?</summary><p>Future balances are divided by the assumed inflation factor. This expresses the estimated balance as purchasing power in today's money, so it can be compared with today's spending target.</p></details>
+<details><summary>How is the savings projection calculated?</summary><p>The calculator grows super and other savings using your assumed investment return. Employer contributions are estimated from salary and the entered super rate, with a 15% contributions-tax allowance. Extra annual savings are added separately. Contributions stop at your selected retirement age.</p></details>
+<details><summary>How is the Age Pension estimated?</summary><p>The calculator estimates deemed income, then applies standard income and assets tests and selects the lower result. It uses official published rates and thresholds dated 20 September 2026 for standard domestic cases. It does not reproduce every Centrelink rule.</p></details>
+<details><summary>What should I do next?</summary><p>Try lower and higher return and inflation assumptions, check how long your savings may need to last, and compare the results with your expected spending. Consider independent financial advice before making decisions.</p></details>
+</div>
+</section>
+</div>
+</main>
+<footer>
+<p><strong>Important information:</strong> This calculator is an educational illustration, not a financial product recommendation or an official Centrelink calculator. All amounts are in Australian dollars (AUD). Results can be materially different from an official assessment.</p>
+<p>Official sources: <a href="https://www.servicesaustralia.gov.au/how-much-age-pension-you-can-get" target="_blank" rel="noopener noreferrer">Age Pension rates</a> · <a href="https://www.servicesaustralia.gov.au/income-test-for-age-pension" target="_blank" rel="noopener noreferrer">Income test</a> · <a href="https://www.servicesaustralia.gov.au/assets-test-for-age-pension" target="_blank" rel="noopener noreferrer">Assets test</a> · <a href="https://www.servicesaustralia.gov.au/deeming" target="_blank" rel="noopener noreferrer">Deeming</a> · <a href="https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/super-guarantee" target="_blank" rel="noopener noreferrer">ATO Super Guarantee</a>.</p>
+<p>Rules and rates can change. Check the official sources before relying on any estimate. RetireAtlas does not store or transmit the information entered in this page.</p>
+
+<p class="site-links"><a href="../privacy-policy/">Privacy Policy</a> · <a href="../about/">About</a> · <a href="../contact/">Contact</a></p>
+</footer>
+<script>
+(function(){
+'use strict';
+const $ = id => document.getElementById(id);
+const money = value => new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0}).format(Number.isFinite(value)?value:0);
+const preciseMoney = value => new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:2}).format(Number.isFinite(value)?value:0);
+const num = id => Number($(id).value);
+const clamp = (x,lo,hi) => Math.min(hi,Math.max(lo,x));
+const valid = (ids) => ids.every(id => $(id).checkValidity() && Number.isFinite(num(id)) && (id==='returnRate' ? num(id)>=-10 : num(id)>=0));
+function clearProjectionResults(){
+ ['nominalBalance','realBalance','spendingValue','realReturn','capitalNeeded','gap'].forEach(id=>{$(id).textContent='—';});
+ $('gap').style.color='';
+ $('fundingFill').style.width='0%';
+ $('fundingBar').setAttribute('aria-valuenow','0');
+ const canvas=$('projectionChart'),ctx=canvas.getContext('2d');
+ if(ctx)ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+function ageValidationMessage(){
+ const age=num('age'),retire=num('retireAge'),life=num('lifeAge');
+ if(!Number.isFinite(age)||!Number.isFinite(retire)||!Number.isFinite(life))return '';
+ if(retire<=age)return 'Retirement age must be greater than your current age.';
+ if(life<=retire)return 'Plan-through age must be greater than retirement age.';
+ return '';
+}
+function simulate(){
+ const ids=['age','retireAge','lifeAge','super','savings','salary','sg','extra','returnRate','inflation','expenses'];
+ if(!valid(ids)){
+ clearProjectionResults();
+ $('projectionNote').textContent='Please check the highlighted inputs and enter valid values. No projection is shown until all inputs are valid.';
+ return;
+ }
+ const age=num('age'), retire=num('retireAge'), life=num('lifeAge'), startSuper=num('super'), startSavings=num('savings'), salary=num('salary'), sg=num('sg')/100, extra=num('extra'), nominal=num('returnRate')/100, inf=num('inflation')/100, expenses=num('expenses');
+ if(retire<=age || life<=retire){
+ clearProjectionResults();
+ $('projectionNote').textContent=ageValidationMessage()+' Please correct the ages and calculate again. No projection is shown for invalid ages.';
+ return;
+ }
+ const years=Math.round(retire-age), real=(1+nominal)/(1+inf)-1;
+ let s=startSuper, o=startSavings; const history=[{age:age,total:s+o}];
+ for(let y=1;y<=years;y++){ s=s*(1+nominal)+salary*sg*(1-.15); o=o*(1+nominal)+extra; history.push({age:age+y,total:s+o}); }
+ const total=s+o, today=total/Math.pow(1+inf,years);
+ const yearsInRetirement=life-retire;
+ // Present value of level real withdrawals: valid for positive and negative real returns above -100%.
+ const needed=Math.abs(real)<0.0000001 ? expenses*yearsInRetirement : expenses*(1-Math.pow(1+real,-yearsInRetirement))/real;
+ const gap=today-needed, funded=needed>0?clamp(today/needed*100,0,100):100;
+ $('nominalBalance').textContent=money(total); $('realBalance').textContent=money(today);
+ $('spendingValue').textContent=money(expenses); $('realReturn').textContent=(real*100).toFixed(2)+'%';
+ $('capitalNeeded').textContent=money(needed); $('gap').textContent=(gap>=0?'+':'−')+money(Math.abs(gap));
+ $('gap').style.color=gap>=0?'#087f72':'#b42318';
+ $('fundingFill').style.width=funded+'%'; $('fundingBar').setAttribute('aria-valuenow',String(Math.round(funded)));
+ $('projectionNote').textContent='Projection period: '+years+' years. The estimate assumes steady annual returns, constant nominal salary/contributions, constant real spending and year-end contributions; it does not model investment volatility, tax on withdrawals or Age Pension in the drawdown simulation.';
+ draw(history,age,retire,inf);
+}
+function draw(history,age,retire,inf){
+ const canvas=$('projectionChart'),ctx=canvas.getContext('2d'); if(!ctx)return;
+ const w=canvas.width,h=canvas.height,pad={l:62,r:16,t:18,b:34};ctx.clearRect(0,0,w,h);
+ const max=Math.max(1,...history.map(x=>x.total));ctx.strokeStyle='#dce5ef';ctx.fillStyle='#637188';ctx.font='12px system-ui';
+ for(let i=0;i<=4;i++){let y=pad.t+(h-pad.t-pad.b)*i/4;ctx.beginPath();ctx.moveTo(pad.l,y);ctx.lineTo(w-pad.r,y);ctx.stroke();ctx.fillText(money(max*(1-i/4)).replace('.00',''),4,y+4);}
+ ctx.strokeStyle='#087f72';ctx.lineWidth=3;ctx.beginPath();
+ history.forEach((pt,i)=>{const x=pad.l+(w-pad.l-pad.r)*(i/Math.max(1,history.length-1));const y=h-pad.b-(h-pad.t-pad.b)*pt.total/max;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);});
+ ctx.stroke();ctx.fillStyle='#637188';ctx.fillText('Age '+age,pad.l,h-9);ctx.fillText('Age '+retire,w-pad.r-52,h-9);
+}
+function pension(){
+ const ids=['pensionAge','assets','financialAssets','otherIncome'];
+ if(!valid(ids)){ $('pensionStatus').textContent='Please enter valid non-negative amounts.';return; }
+ const household=$('household').value, homeowner=$('homeowner').value==='yes', age=num('pensionAge'), assets=num('assets'), financial=Math.min(num('financialAssets'),assets), other=num('otherIncome');
+ const couple=household==='couple';
+ const full=couple?1866:1237.70, freeIncome=couple?396:226, incomeReduction=.50;
+ const fullAssets=couple?(homeowner?499000:766000):(homeowner?333000:600000);
+ const cutoffAssets=couple?(homeowner?1121000:1388000):(homeowner?745750:1012750);
+ const deemThreshold=couple?110600:66800, deem1=Math.min(financial,deemThreshold)*.0175, deem2=Math.max(0,financial-deemThreshold)*.0375;
+ const deemed=deem1+deem2, fortnightIncome=other+(deemed/26);
+ let incomeRate=Math.max(0,full-Math.max(0,fortnightIncome-freeIncome)*incomeReduction);
+ // Standard assets taper is $3 per full $1,000 above the free area; apply the published cut-off explicitly.
+ let assetsRate=Math.max(0,full-Math.floor(Math.max(0,assets-fullAssets)/1000)*3);
+ if(assets>=cutoffAssets)assetsRate=0;
+ // The couple reduction is A$3 per $1,000 on the combined household assessment, shared across both pensioners.
+ // A one-partner-eligible couple and illness-separated couple are intentionally outside this MVP.
+ const result=Math.min(full,incomeRate,assetsRate);
+ $('pensionFortnight').textContent=money(age<67?0:result);
+ $('pensionAnnual').textContent=money(age<67?0:result*26);
+ $('deemedIncome').textContent=money(deemed)+' / year';
+ $('incomeTest').textContent=money(age<67?0:incomeRate)+' / fortnight';
+ $('assetsTest').textContent=money(age<67?0:assetsRate)+' / fortnight';
+ if(age<67)$('pensionStatus').textContent='Age is below the standard Age Pension age of 67. This is a screening estimate only; residency and other eligibility rules are not assessed.';
+ else if(num('financialAssets')>assets)$('pensionStatus').textContent='Financial assets were capped at the total assessable assets entered. Check that the financial-assets amount is included within the household asset total.';
+ else $('pensionStatus').textContent='Indicative standard-rate result only. It assumes Australian domestic rates, no Work Bonus or Rent Assistance, no transitional rate, and (for couples) both partners eligible. Actual Centrelink calculations and rounding may differ.';
+}
+$('calcForm').addEventListener('submit',e=>{e.preventDefault();simulate();});
+$('calcForm').addEventListener('input',()=>{
+ clearProjectionResults();
+ const message=ageValidationMessage();
+ $('projectionNote').textContent=message ? message+' Please correct the ages and calculate again. No projection is shown for invalid ages.' : 'Your inputs have changed. Select “Calculate my retirement estimate” to update the projection.';
+});
+$('calcForm').addEventListener('reset',()=>setTimeout(simulate,0));
+$('pensionForm').addEventListener('submit',e=>{e.preventDefault();pension();});
+$('household').addEventListener('change',pension);$('homeowner').addEventListener('change',pension);
+$('pensionForm').addEventListener('reset',()=>setTimeout(pension,0));
+simulate();pension();
+})();
+</script>
+</body>
+</html>
