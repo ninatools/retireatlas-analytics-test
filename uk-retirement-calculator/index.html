@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Illustrative UK pension income tax calculator for supported standard cases in 2026–27. Estimate tax on entered pension income and review important limitations.">
+<meta name="theme-color" content="#142b49">
+<title>UK Pension Tax Calculator | RetireAtlas</title>
+<style>
+:root{--navy:#142b49;--teal:#087f72;--blue:#2563eb;--ink:#17243a;--muted:#637188;--line:#dce5ef;--bg:#f5f7fb;--white:#fff;--warning:#fff7e6;--warning-ink:#805500;--danger:#b42318;--radius:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:15px 20px}.nav{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;color:white;text-decoration:none}.brand span{color:#7dd3c7}.nav-note{font-size:.9rem;color:#dbe7f4}
+main{max-width:1180px;margin:26px auto;padding:0 16px 40px}.hero{margin-bottom:22px}.eyebrow{color:var(--teal);font-weight:750;font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin:6px 0 10px;letter-spacing:-.04em;color:var(--navy)}.hero p{color:var(--muted);max-width:780px;margin:0}
+.layout{display:grid;grid-template-columns:minmax(280px,390px) minmax(0,1fr);gap:20px;align-items:start}.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 4px 18px rgba(20,43,73,.035)}h2{font-size:1.12rem;color:var(--navy);margin:0 0 14px}h3{font-size:1rem;color:var(--navy);margin:0 0 10px}.section{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}.section:last-child{border:0;padding:0;margin:0}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}label{display:block;font-size:1rem;font-weight:650;margin-bottom:6px;color:#33445e}input,select{width:100%;min-width:0;border:1px solid #cbd7e5;border-radius:10px;padding:11px 12px;font:inherit;color:var(--ink);background:#fff}input:focus,select:focus{outline:3px solid #bfdbfe;border-color:var(--blue)}.hint{font-size:.78rem;color:var(--muted);margin:5px 0 0}.actions{display:flex;gap:10px;margin-top:18px}button{font:inherit;font-weight:750;border-radius:10px;padding:12px 15px;cursor:pointer}.primary{background:var(--blue);color:white;border:1px solid var(--blue);flex:1}.secondary{background:#fff;color:var(--navy);border:1px solid var(--line)}button:focus-visible{outline:3px solid #bfdbfe;outline-offset:2px}.error{display:none;background:#fff0ef;color:var(--danger);border:1px solid #f2b8b5;border-radius:10px;padding:11px 12px;margin-top:14px;font-size:.9rem}
+.results{display:grid;gap:16px}.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.metric{border:1px solid var(--line);border-radius:13px;padding:15px;min-width:0}.metric .label{font-size:.82rem;color:var(--muted);font-weight:650}.metric .value{font-size:clamp(1.25rem,2.5vw,1.8rem);font-weight:850;color:var(--navy);letter-spacing:-.04em;overflow-wrap:anywhere;margin:5px 0}.metric.primary-metric{background:#e8f5f1;border-color:#b9e1d8}.metric.primary-metric .value{color:var(--teal)}.small{font-size:.9rem;color:var(--muted)}.notice{background:var(--warning);color:var(--warning-ink);border:1px solid #f0dca8;border-radius:12px;padding:14px;font-size:.88rem}.notice a{color:inherit}.critical{background:#fff0ef;color:#7a271a;border:1px solid #f2b8b5;border-radius:12px;padding:14px;font-size:.88rem}.disclaimer{font-size:.82rem;color:var(--muted);margin:0}.result-list{display:grid;gap:10px}.result-row{display:flex;justify-content:space-between;gap:15px;padding:10px 0;border-bottom:1px solid var(--line)}.result-row:last-child{border-bottom:0}.result-row strong{text-align:right;font-variant-numeric:tabular-nums}
+footer{max-width:1180px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:.8rem}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr 1fr}.summary-grid .metric:last-child{grid-column:1/-1}}@media(max-width:520px){header{padding:13px 16px}.nav-note{display:none}main{margin-top:20px;padding:0 12px 28px}.card{padding:16px}.field-grid,.summary-grid{grid-template-columns:1fr}.summary-grid .metric:last-child{grid-column:auto}.actions{flex-direction:column}}
+</style>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"80b34a467198469e92e3636312d38b9f"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<header><div class="nav"><a class="brand" href="../index.html">Retire<span>Atlas</span></a><div class="nav-note">Plan with clarity. Prepare with confidence.</div></div></header>
+<main>
+<section class="hero"><div class="eyebrow">Free retirement planning tool · 2026–27</div><h1>UK Pension Tax Calculator</h1><p>Estimate income tax on the UK pension income you enter, see the Personal Allowance assumption and understand your estimated take-home amount. This is an educational estimate, not an official tax calculation.</p></section>
+<div class="layout">
+<section class="card" aria-labelledby="input-title"><h2 id="input-title">Your pension income</h2>
+<form id="tax-form" novalidate>
+<div class="section"><div class="field-grid">
+<div><label for="jurisdiction">UK tax jurisdiction</label><select id="jurisdiction"><option value="rUK">England, Wales or Northern Ireland</option><option value="scotland">Scotland</option></select><p class="hint">Income tax bands differ in Scotland.</p></div>
+<div><label for="state">State Pension (£/year)</label><input id="state" type="number" min="0" max="100000000" step="1" value="12000" required></div>
+<div><label for="db">Defined-benefit / workplace pension (£/year)</label><input id="db" type="number" min="0" max="100000000" step="1" value="0" required></div>
+<div><label for="dc">Taxable defined-contribution withdrawals (£/year)</label><input id="dc" type="number" min="0" max="100000000" step="1" value="0" required></div>
+<div><label for="other">Other taxable pension income (£/year)</label><input id="other" type="number" min="0" max="100000000" step="1" value="0" required></div>
+</div></div>
+<div class="notice">Enter annual taxable amounts in pounds. State Pension is generally taxable even though tax is not usually deducted before it is paid. Do not include a tax-free lump sum as taxable pension income.</div>
+<div class="actions"><button class="primary" type="submit">Calculate estimate</button><button class="secondary" type="button" id="reset">Reset</button></div><div id="error" class="error" role="alert" aria-live="polite"></div>
+</form></section>
+<section class="results" aria-live="polite" aria-label="Estimated tax results">
+<div class="card"><h2>Your illustrative estimate</h2><div class="summary-grid"><div class="metric primary-metric"><div class="label">Estimated annual income tax</div><div class="value" id="tax">£0</div><div class="small">Based on entered pension income</div></div><div class="metric"><div class="label">Estimated annual income after tax</div><div class="value" id="net">£0</div><div class="small">Before any unmodelled costs</div></div><div class="metric"><div class="label">Effective estimated tax rate</div><div class="value" id="effective">0%</div><div class="small">Tax divided by entered income</div></div></div>
+<div class="result-list" style="margin-top:18px"><div class="result-row"><span>Total entered pension income</span><strong id="total">£0</strong></div><div class="result-row"><span>Personal Allowance used</span><strong id="pa">£12,570</strong></div><div class="result-row"><span>Estimated taxable income after allowance</span><strong id="taxable">£0</strong></div><div class="result-row"><span>Estimated monthly income after tax</span><strong id="monthly">£0</strong></div></div>
+</div>
+<div class="critical"><strong>Important known comparison difference</strong><br>In one internal test (Case 5), these displayed inputs were State Pension £12,000 and private pension £90,000, with no Marriage Allowance selected. This calculator's standard-rate arithmetic gives estimated tax of £28,632, while the HMRC estimator showed £28,432. We have not established the reason for the £200 difference. This result is illustrative only and has not been verified as an exact match to HMRC for every case. Please check your own circumstances using <a href="https://www.gov.uk/guidance/check-if-you-have-to-pay-tax-on-your-pension" target="_blank" rel="noopener noreferrer">HMRC's pension tax estimator</a>.</div>
+<div class="notice"><strong>When not to rely on this estimate</strong><br>This simple version is intended for supported standard pension-income examples. It does not model all tax reliefs, allowances, pension lump-sum effects, benefits, savings or investment income, foreign income, residence issues or cross-border tax rules. If you have other taxable income or a complex situation, use current HMRC guidance or speak to a qualified tax adviser.</div>
+<div class="card"><h2>How the estimate works</h2><p class="small">The calculator totals the pension income entered, estimates the Personal Allowance using the standard £12,570 allowance and the £1-for-£2 taper above £100,000 adjusted net income, then applies illustrative 2026–27 income tax bands for the selected jurisdiction. It assumes the entered pension income is the only taxable income included in the calculation. Scottish rates and bands differ from the rest of the UK.</p><p class="small">Rules and thresholds can change. Confirm current rules with <a href="https://www.gov.uk/estimate-income-tax" target="_blank" rel="noopener noreferrer">GOV.UK tax guidance</a> before making decisions.</p></div>
+</section>
+</div></main>
+<footer>RetireAtlas provides educational estimates, not financial, tax or legal advice. Results are not a statement of tax owed or a guarantee. Calculations run in your browser; no information is sent to a server by this page.
+<p class="site-links"><a href="../privacy-policy/">Privacy Policy</a> · <a href="../about/">About</a> · <a href="../contact/">Contact</a></p>
+</footer>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const money = n => new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP',maximumFractionDigits:0}).format(Number.isFinite(n)?n:0);
+const num = id => Number($(id).value);
+const fields = ['state','db','dc','other'];
+function calculate(){
+  const income = fields.reduce((sum,id)=>sum+num(id),0);
+  const ani = income;
+  if(fields.some(id=>$(id).value.trim()===''||!Number.isFinite(num(id))||num(id)<0)){
+    $('error').textContent='Please enter valid non-negative annual amounts for all pension income fields.';
+    $('error').style.display='block';return;
+  }
+  $('error').style.display='none';
+  const pa = Math.max(0,12570 - Math.floor(Math.max(0,ani-100000)/2));
+  const taxable = Math.max(0,income-pa);
+  let tax=0;
+  if($('jurisdiction').value==='rUK'){
+    const basic = Math.min(taxable,37700);
+    const higherCap = Math.max(0,125140-pa-37700);
+    const higher = Math.min(Math.max(0,taxable-37700),higherCap);
+    const additional = Math.max(0,taxable-37700-higherCap);
+    tax=basic*.20+higher*.40+additional*.45;
+  } else {
+    // Scotland's 2026–27 cumulative thresholds are expressed as total income thresholds.
+    const bands=[{threshold:16537,rate:.19},{threshold:29526,rate:.20},{threshold:43662,rate:.21},{threshold:75000,rate:.42},{threshold:125140,rate:.45},{threshold:Infinity,rate:.48}];
+    let previousTaxableBoundary=0, remaining=taxable;
+    for(const band of bands){
+      const boundary=band.threshold===Infinity?Infinity:Math.max(0,band.threshold-pa);
+      const width=boundary===Infinity?Infinity:Math.max(0,boundary-previousTaxableBoundary);
+      const amount=Math.min(remaining,width);
+      if(amount>0){tax+=amount*band.rate;remaining-=amount;}
+      if(remaining<=0)break;
+      previousTaxableBoundary=boundary;
+    }
+  }
+  tax=Math.max(0,Math.min(tax,income));
+  $('tax').textContent=money(tax);
+  $('net').textContent=money(income-tax);
+  $('effective').textContent=(income>0?(tax/income*100):0).toFixed(1)+'%';
+  $('total').textContent=money(income);
+  $('pa').textContent=money(pa);
+  $('taxable').textContent=money(taxable);
+  $('monthly').textContent=money((income-tax)/12);
+}
+$('tax-form').addEventListener('submit',e=>{e.preventDefault();calculate();});
+$('reset').addEventListener('click',()=>{ $('jurisdiction').value='rUK'; $('state').value='12000'; $('db').value='0'; $('dc').value='0'; $('other').value='0'; calculate();});
+['jurisdiction',...fields].forEach(id=>$(id).addEventListener('change',calculate));
+calculate();
+})();
+</script>
+</body>
+</html>
